@@ -1,7 +1,6 @@
 name: "Valerio Pierbattista Blog"
 description: "Valerio Pierbattista Blog"
 gems: [jekyll-paginate]
-url: "http://localhost:4000/blog"
 source: _src
 destination: _dev
 exclude: [scss, images, twitterfeed, get-tweets.php, spotify.php, index.html, work.html]

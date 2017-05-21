@@ -3,8 +3,8 @@ description: "Valerio Pierbattista Blog"
 gems: [jekyll-paginate]
 source: _src
 destination: _dev
-exclude: [scss, images, twitterfeed, get-tweets.php, spotify.php, index.html, work.html]
-keep_files: [js, css, images, twitterfeed, get-tweets.php, spotify.php, index.html, work.html]
+exclude: [scss, images, twitterfeed, get-tweets.php, spotify.php, index.html, work.html, cookies.html]
+keep_files: [js, css, images, twitterfeed, get-tweets.php, spotify.php, index.html, work.html, cookies.html]
 encoding: utf-8
 paginate: 10
 incremental: true

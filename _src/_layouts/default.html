@@ -1,0 +1,24 @@
+<!doctype html>
+<!--[if IE 9]>
+<html lang="en" class="ie ie9">
+<![endif]-->
+<!--[if lt IE 9]>
+<html lang="en" class="ie ie-legacy">
+<![endif]-->
+<html lang="en">
+
+<head>
+ {% include head.html %}
+</head>
+
+<body class="container">
+     {% include cookie-bar.html %}
+     {% include sidebar.html %}
+
+        {{ content }}
+
+     {% include footer.html %}
+     {% include scripts.html %}
+     <script src="../js/custom/prism.js"></script>
+</body>
+</html>

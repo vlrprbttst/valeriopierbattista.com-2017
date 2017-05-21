@@ -110,9 +110,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
-                    '<%= dev %>/<%= js %>/libs/jquery/dist/jquery.js',
-                    '<%= dev %>/<%= js %>/libs/instaFeed/source/core.js',
-                    '<%= dev %>/<%= js %>/custom/**/*.js'
+                    '<%= dev %>/<%= js %>/libs/jquery/dist/jquery.js','<%= dev %>/<%= js %>/custom/headroom.js','<%= dev %>/<%= js %>/custom/main.js'
                 ],
                 dest: '<%= site %>/<%= js %>/production.js'
             }
@@ -206,7 +204,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= source %>/',
-                    src: ['**/*.html', '!_includes/**/*.html'],
+                    src: ['**/*.html', '!_includes/**/*.html','!_layouts/**/*.html'],
                     dest: '<%= dev %>/',
                     ext: '.html'
                 }, ],
@@ -219,14 +217,6 @@ module.exports = function(grunt) {
                     dest: '<%= site %>/',
                     ext: '.html'
                 }, ],
-            }
-        },
-
-        delete_sync: {
-            dist: {
-                cwd: '<%= dev %>',
-                src: ['**/*.html', '**/*.{png,jpg,gif,svg}', '!**/*.css', '!_includes/**/*.html', '!<%= js %>/**/*.js', '!<%= scss %>/**/*.scss'],
-                syncWith: '<%= source %>'
             }
         },
 
@@ -249,6 +239,24 @@ module.exports = function(grunt) {
                     cwd: '<%= source %>',
                     dest: '<%= dev %>/',
                     src: ['twitterfeed','*.php']
+                }]
+            },
+            static_files_build: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= dev %>',
+                    dest: '<%= site %>/',
+                    src: ['twitterfeed','*.php']
+                }]
+            },
+            js_custom: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= dev %>',
+                    dest: '<%= site %>/',
+                    src: ['js/custom/**/*.js']
                 }]
             },
             the_fonts: {
@@ -339,11 +347,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-delete-sync');
 
     // default for development: type grunt
     grunt.registerTask('default', ['browserSync', 'watch']);
     // rebuild the _site folder: type grunt build
-    grunt.registerTask('build', ['clean', 'delete_sync', 'processhtml:build', 'htmlmin', 'concat', 'uglify', 'copy:css_build', 'postcss:build', 'copy:images','copy:fonts_build']);
+    grunt.registerTask('build', ['clean', 'processhtml:build', 'htmlmin', 'concat', 'uglify', 'copy:css_build', 'postcss:build', 'copy:images','copy:fonts_build','copy:static_files_build','copy:js_custom']);
 
 };

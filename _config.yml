@@ -1,0 +1,26 @@
+name: "Valerio Pierbattista Blog"
+description: "Valerio Pierbattista Blog"
+gems: [jekyll-paginate]
+url: "http://localhost:4000/blog"
+source: _src
+destination: _dev
+exclude: [scss, images, twitterfeed, get-tweets.php, spotify.php, index.html, work.html]
+keep_files: [js, css, images, twitterfeed, get-tweets.php, spotify.php, index.html, work.html]
+encoding: utf-8
+paginate: 10
+incremental: true
+paginate_path: "blog/:num"
+permalink: blog/:title/
+excerpt_separator: <!--more-->
+permalink: pretty
+url: "http://valeriopierbattista.com"
+twitter_username: vlrprbttst
+github_username:  vlrprbttst
+
+defaults:
+  -
+    scope:
+      path: "blog"
+      type: "posts"
+    values:
+      layout: "blog-post"

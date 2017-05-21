@@ -247,7 +247,7 @@ module.exports = function(grunt) {
                     dot: true,
                     cwd: '<%= dev %>',
                     dest: '<%= site %>/',
-                    src: ['twitterfeed','*.php']
+                    src: ['twitterfeed/**/*.*','*.php']
                 }]
             },
             js_custom: {

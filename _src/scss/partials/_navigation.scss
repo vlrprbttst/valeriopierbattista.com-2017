@@ -77,7 +77,7 @@ nav {
         display: block;
         text-decoration: none;
         color: $textPrimaryColor;
-        font-family: 'Source Code Pro';
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
         @include respond-to(64) {
           @include span(3 of 3);
           padding: rhythm(.5) span(1);

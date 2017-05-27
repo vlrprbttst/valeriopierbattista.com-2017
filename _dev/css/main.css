@@ -447,7 +447,7 @@ nav ul {
       display: block;
       text-decoration: none;
       color: #FFFFFF;
-      font-family: 'Source Code Pro'; }
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
       @media all and (max-width: 64em) {
         nav ul li a,
         nav ul li a:visited,
@@ -503,7 +503,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Merriweather';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background: #f9f9f9;
   max-width: 100%;
   margin-left: auto;
@@ -588,7 +588,7 @@ body {
     .sub-container .work-item p span {
       background: #eee;
       color: #212121;
-      font-family: 'Source Code Pro'; }
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
     .sub-container .work-item:nth-child(odd) {
       margin: 0 2.08333% 4.16667% 0; }
     .sub-container .work-item:nth-child(even) {
@@ -645,7 +645,7 @@ li {
   li code {
     background: #eee;
     padding: 0 5px;
-    font-family: 'Source Code Pro'; }
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
 
 ul li p {
   font-size: 1em;
@@ -657,7 +657,7 @@ ul li p {
 
 pre,
 code {
-  font-family: 'Source Code Pro' !important; }
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !important; }
 
 a,
 a:visited,
@@ -896,7 +896,7 @@ img {
 .blog .date,
 .blog .sharethis {
   color: #B6B6B6;
-  font-family: 'Source Code Pro'; }
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
 .blog .social-cont div.social-box.facebook {
   background: #3B5998; }
   .blog .social-cont div.social-box.facebook i.social-ico {
@@ -956,7 +956,7 @@ img {
   .blog .pagination li {
     float: left;
     margin: 0 10px;
-    font-family: 'Source Code Pro'; }
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
     .blog .pagination li:last-child {
       margin-right: 0; }
     .blog .pagination li:first-child {
@@ -1093,7 +1093,7 @@ pre[class*="language-"] {
   padding: 10px 20px;
   font-size: 12px;
   line-height: 16px;
-  font-family: 'Source Code Pro';
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   text-align: center;
   position: fixed;
   z-index: 999;

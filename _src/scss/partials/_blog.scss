@@ -40,7 +40,7 @@
   .date,
   .sharethis {
     color: $dividerColor;
-    font-family: 'Source Code Pro';
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   }
   $color-set: ( facebook:#3B5998, twitter: #56A3D9, linkedin: #007BB6, gplus:#D14836 );
   $socialsize: 2.3rem;
@@ -118,7 +118,7 @@
     li {
       float: left;
       margin: 0 10px;
-      font-family: 'Source Code Pro';
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
       &:last-child {
         margin-right: 0;
       }

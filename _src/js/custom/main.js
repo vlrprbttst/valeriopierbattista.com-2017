@@ -1,3 +1,35 @@
+//smart resize
+(function($, sr) {
+  // debouncing function from John Hann
+  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+  var debounce = function(func, threshold, execAsap) {
+      var timeout;
+
+      return function debounced() {
+        var obj = this,
+          args = arguments;
+
+        function delayed() {
+          if (!execAsap)
+            func.apply(obj, args);
+          timeout = null;
+        };
+
+        if (timeout)
+          clearTimeout(timeout);
+        else if (execAsap)
+          func.apply(obj, args);
+
+        timeout = setTimeout(delayed, threshold || 100);
+      };
+    }
+    // smartresize
+  jQuery.fn[sr] = function(fn) {
+    return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
+  };
+
+})(jQuery, 'smartresize');
+
 
 $('#bars').click(function() {
 	$('#bars').toggleClass('fa-bars fa-remove');
@@ -5,16 +37,17 @@ $('#bars').click(function() {
 });
 
 function navHeight() {
-
 	var heights = window.innerHeight;
 	var outerHeights = $(".this-sidebar .sub-container-sidebar").outerHeight(true) + $("footer .sub-container-sidebar").outerHeight(true);
 	$('nav.nav ul').css('height', (heights - outerHeights) + "px");
-
 };
 
 navHeight();
-$(window).resize(navHeight);
+$(window).smartresize(function() {
+  navHeight();
+});
 
+// cookie management and cookie bar
 function createCookie(name, value, days) {
 	if (days) {
 		var date = new Date();
@@ -56,8 +89,8 @@ function eraseCookie(name) {
 	}
 })();
 
+// headroom
 function mobileMenu() {
-
 	var wWidth = $(window).width();
 	var myElement = document.querySelector(".this-sidebar");
 	var headroom = new Headroom(myElement, {
@@ -66,18 +99,18 @@ function mobileMenu() {
 	});
 
 	if (wWidth <= 1024) {
-
 		headroom.init();
-
 	} else {
 		headroom.destroy();
 	}
-
 };
 
 mobileMenu();
-$(window).resize(mobileMenu);
+$(window).smartresize(function() {
+  mobileMenu();
+});
 
+// google analytics
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

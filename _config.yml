@@ -23,3 +23,4 @@ defaults:
       type: "posts"
     values:
       layout: "blog-post"
+      permalink: blog/:title/

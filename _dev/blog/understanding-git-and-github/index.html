@@ -1,0 +1,317 @@
+<!doctype html>
+<!--[if IE 9]>
+<html lang="en" class="ie ie9">
+<![endif]-->
+<!--[if lt IE 9]>
+<html lang="en" class="ie ie-legacy">
+<![endif]-->
+<html lang="en">
+
+<head>
+    <title>Understanding Git And Github</title>
+    <meta name="description" content="Understanding what Git and Github are is one important step in the life of a developer. Let's start open sourcing!">
+    <meta charset="utf-8">
+<script src="https://use.fontawesome.com/99fde4e73f.js"></script>
+<link href="/css/main.css" rel="stylesheet" type="text/css">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Use latest IE randering engine and switch on chrome Frame if available -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="content-language" content="EN">
+
+
+    <meta property="og:title" content="Understanding Git And Github">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.valeriopierbattista.com/blog/understanding-git-and-github/">
+    <meta property="og:image" content="http://www.valeriopierbattista.com/images/blog/github.jpg">
+    <meta property="og:description" content="Understanding what Git and Github are is one important step in the life of a developer. Let's start open sourcing!">
+    <meta property="og:site_name" content="http://valeriopierbattista.com/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="http://www.valeriopierbattista.com/blog/understanding-git-and-github/">
+    <meta name="twitter:creator" content="@vlrprbttst">
+    <meta name="twitter:title" content="Understanding Git And Github">
+    <meta name="twitter:description" content="Understanding what Git and Github are is one important step in the life of a developer. Let's start open sourcing!">
+    <meta name="twitter:image" content="http://www.valeriopierbattista.com/images/blog/github.jpg">
+</head>
+
+<body class="container">
+     <div id="info_cookie" style="display:none" class="cookie-hidden">
+    Questo sito raccoglie dati statistici anonimi sulla navigazione, mediante cookie installati da terze parti autorizzate, rispettando la privacy dei tuoi dati personali e secondo le norme previste dalla legge. Continuando a navigare su questo sito accetti
+    il servizio e gli stessi cookie.
+    <br>
+    <div class="ok-cookie cookie-btn">
+        <i class="fa fa-thumbs-up"></i> ok
+    </div>
+    <div class="cookie-policy cookie-btn">
+        <a href="cookies.php">cookie policy</a>
+    </div>
+</div>
+
+     <div class="this-sidebar">
+    <i id="bars" class="fa fa-bars"></i>
+    <div class="sub-container-sidebar">
+        <section itemscope itemtype="http://data-vocabulary.org/Person">
+            <span itemprop="name" class="name">Valerio Pierbattista</span>
+            <br>
+            <span itemprop="title" class="job">
+                <code>
+                    Front end web developer
+                </code>
+            </span>
+        </section>
+    </div>
+
+    <nav class="nav">
+        <ul>
+            <li>
+                <a href="/index.html"><i class="fa fa-user"></i> About</a>
+            </li>
+            <li>
+                <a href="/work.html"><i class="fa fa-code"></i> Work</a>
+            </li>
+            <li>
+                <a href="/blog"><i class="fa fa-pencil"></i> Blog</a>
+            </li>
+            <li>
+                <a href="mailto:omegaiori@gmail.com"><i class="fa fa-send-o"></i> Contact</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<div class="page-container">
+	<div class="sub-container blog blog-post">
+		<div class="entry">
+			<h1>Understanding Git And Github</h1>
+			<span class="date"><i class="fa fa-clock-o"></i> December 31, 2015</span>
+			<p><img src="/images/blog/github.jpg" class="cover" /></p>
+
+<p>Understanding what Git and Github are is one important step in the life of a developer. I used to keep my projects and files on my computer hard drive and <strong>I had no way
+of accessing them from any other location different from home</strong>. Github let’s you <em>push</em> your codebase online and makes it accessible from any remote location, which can be anything: from your work’s computer to your friend’s for example.</p>
+
+<p>Github is a <em>social</em> platform for code repositories, and it’s free as long as you <strong>keep your repos openly accessible and public</strong>. You might turn up your nose at keeping all your work online and clearly visible to anyone, but that’s one cornerstone of this community: open sourcing is the best way to let anyone reuse, learn and get inspired by your code. Using others work and knowledge is how we all started, isn’t it? So let’s start open sourcing!</p>
+
+<!--more-->
+
+<h2 id="whats-the-difference-between-git-and-github">What’s the difference between Git and Github?</h2>
+
+<p><a href="http://github.com">Github</a> is an online platform based on <a href="https://git-scm.com/">Git</a>.<br />
+Git is a version control system for software development (similar to SVN for example).</p>
+
+<p>To have it working, the first step is installing Git on your machine:</p>
+
+<ul>
+  <li><a href="http://code.google.com/p/git-osx-installer/downloads/list?can=3">Git for OSX</a></li>
+  <li><a href="http://msysgit.github.io/">Git for Windows</a></li>
+</ul>
+
+<p>Once done, you can then create a <a href="http://github.com">Github</a> account and create your first repository by navigating to your profile page, clicking on the “repositories” tab and finally clicking the <strong>NEW</strong> green button:</p>
+
+<p><img src="/images/blog/github2.png" /></p>
+
+<p>This will lead you to a new page where you will choose the name of the repository (in my case I used the name <code>test</code>). Make sure the <em>“Initialize this repository with a README”</em> option is flagged, I will later explain why.</p>
+
+<p><img src="/images/blog/github3.png" /></p>
+
+<p>You now have your first repository online, but it’s empty. Let’s add some more files and push them online!</p>
+
+<h2 id="linking-your-local-project-folder-to-the-github-repository">Linking your local project folder to the Github repository</h2>
+
+<p>Without creating a new folder for your project, navigate locally where you want it to be and right-click to start the Git Bash (which comes with the Git installer if you are on Windows):</p>
+
+<p><img src="/images/blog/github4.png" /></p>
+
+<p>What you will do now is <em>pull</em> the online repository and all the needed Git files on your computer. This is called <strong>cloning a repository</strong> and it is accomplished
+in just some simple steps.</p>
+
+<ul>
+  <li>
+    <p>Navigate to your online repository and copy the <code>link.git</code> of your repository:
+<img src="/images/blog/github5.png" /></p>
+  </li>
+  <li>
+    <p>back to the Git Bash, type <code class="language-git">git clone link.git</code> where <code>link.git</code> is the url you just copied.</p>
+  </li>
+</ul>
+
+<p>You are all set! You now have a local codebase linked to your online Github Repository.</p>
+
+<p><img src="/images/blog/github6.png" /></p>
+
+<p>Let’s now try to add a local file and push it online.</p>
+
+<h2 id="adding-and-pushing-code-to-github">Adding and pushing code to Github</h2>
+
+<p>Let’s start adding a simple <code>index.html</code> to your local folder. To push it online, Git needs you to always run a certain combination of instructions via the Git Bash in order
+to accomplish the task. Once your code is done and you decide to push it online, you have to type the following commands in the bash:</p>
+
+<ul>
+  <li><code class="language-git">git status</code> <i style="font-size:12px">(optional)</i>
+<br /> This command let’s you see which files have been locally added or modified. Checking the git status is not mandatory, but may be useful to track locally modified or added files.</li>
+  <li><code class="language-git">git add .</code><br />
+This is a shortcut to add all modified files to the commit you are about to perform. Type <code class="language-git">git status</code> again and you will see the index file color changed from red to green.</li>
+  <li><code class="language-git" style="word-wrap: break-word;">git commit -m "first commit for my test repository"</code><br />
+Commits tell the revision control system to make a group of changes final, and make the files ready to be pushed.</li>
+  <li><code class="language-git">git push origin master</code><br />
+This is only needed on the first push. From now on, to push your changes to your repository master branch,
+the only thing you will need to type is <code class="language-git">git push</code>. While performing a push, you will be asked your github username and password.</li>
+</ul>
+
+<p>You can now go online and see your index.html file magically appear on your online github repository. YAY!</p>
+
+<p><img src="/images/blog/github7.png" /></p>
+
+<h2 id="readmemd-and-gitignore-files">README.md and .gitignore files</h2>
+
+<p>Those are two important files to add to any of your public repositories. The README.md usually contains a description of the respository and install instructions. The file has been created automatically with your repository and it must be written in markdown language:</p>
+
+<blockquote>
+  <p>Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).</p>
+</blockquote>
+
+<p>You can learn more about the markdown language at <a href="https://daringfireball.net/projects/markdown/">this website</a> or practice it on this <a href="http://dillinger.io/">online Markdown editor</a>.</p>
+
+<p>The <code>.gitignore</code> file is a text file containing a list of folders or files you <strong>don’t</strong> want to publish on your online repository. From google:</p>
+
+<blockquote>
+  <p>If you create a file in your repository named .gitignore, Git uses it to determine which files and directories to ignore, before you make a commit. A .gitignore file should be committed into your repository, in order to share the ignore rules with any other users that clone the repository.</p>
+</blockquote>
+
+<p>The files you don’t want to share are, for example, sensible data such as <code>.txt</code> files with passwords for deploy, useless files or folders such as <code class="highlighter-rouge">DS_Store</code> files, build tools folders such as <code class="highlighter-rouge">node_modules</code> or <code class="highlighter-rouge">bower_componenents</code>. If you are having troubles creating the .gitignore file, check <a href="http://stackoverflow.com/questions/10744305/how-to-create-gitignore-file">this stackoverflow question</a> out.</p>
+
+<h2 id="having-your-code-in-the-cloud">Having your code in the Cloud</h2>
+
+<p>Having your code safely stored and easily accessible online is one of the coolest features of Github. Let’s assume you have created the project on your desktop computer but you want to continue working on it on your laptop computer. You can clone the repository on the laptop, work on it and push the changes.</p>
+
+<p>What happens when you switch back to your desktop computer again? Your local version there was left behind this last commit you did on the laptop. All you need to do here is performing a <em>pull</em> to download the latest modifications to the codebase on your desktop computer.</p>
+
+<ul>
+  <li>Navigate at the root of your project and open the Git Bash</li>
+  <li>Type <code class="language-git">git pull</code></li>
+</ul>
+
+<p>Your local version on your desktop computer is now up to date and you can keep working on it! If something goes wrong, check the Bash to see if there’s any conflict, <a href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">resolve them</a> and perform the push procedure again to finalize.</p>
+
+<p>If you want to practice cloning a repository, making it yours and adding files to it, I’ve kept the test respository on my github account for you to practice: <a href="https://github.com/vlrprbttst/test">https://github.com/vlrprbttst/test</a>. Hope this helps! Happy New Year!</p>
+ <p class="sharethis">Share this:</p>
+<div class="social-cont">
+
+  <div class="social-box facebook">
+    <a href="https://facebook.com/sharer.php?u=http://valeriopierbattista.com/blog/understanding-git-and-github/" rel="nofollow" target="_blank" title="Share on Facebook"> <i class="fa social-ico fa-facebook"> </i> </a>
+  </div>
+
+  <div class="social-box twitter">
+    <a href="https://twitter.com/intent/tweet?text=Understanding Git And Github&url=http://valeriopierbattista.com/blog/understanding-git-and-github/&via=vlrprbttst&related=vlrprbttst" rel="nofollow" target="_blank" title="Share on Twitter"> <i class="fa social-ico fa-twitter"> </i> </a>
+  </div>
+
+  <div class="social-box linkedin">
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://valeriopierbattista.com/blog/understanding-git-and-github/&title=Understanding Git And Github&source=http://valeriopierbattista.com" target="_blank"> <i class="fa social-ico fa-linkedin"> </i> </a>
+  </div>
+<div class="social-box gplus">
+  <a href="https://plus.google.com/share?url=http://valeriopierbattista.com/blog/understanding-git-and-github/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa social-ico fa-google-plus"> </i></a>
+</div>
+</div>
+
+			<a class="back-btn" href="#" onclick="window.history.back()"><i class="fa fa-long-arrow-left"></i> Back</a>
+
+			<div id="disqus_thread"></div>
+			<script>
+			/*
+				var disqus_config = function() {
+					this.page.url = http: //valeriopierbattista.com/blog;  // Replace PAGE_URL with your page's canonical URL variable
+						this.page.identifier = valeriopierbattistacomblog; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				}; */
+
+				(function() { // DON'T EDIT BELOW THIS LINE
+					var d = document,
+						s = d.createElement('script');
+
+					s.src = '//valeriopierbattistacomblog.disqus.com/embed.js';
+
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+		</div>
+		<h3>Guest Posts</h3>
+<ul>
+  <li><a href="http://www.neomobile-blog.com/neomobile-insight-web-responsive-design/" target="_blank">Challenges of a Web Responsive Design</a> - on Neomobile Blog</li>
+  <li><a href="http://www.webhouseit.com/creare-siti-e-blog-statici-con-jekyll/" target="_blank">Creare siti e blog statici con Jekyll</a> - on Webhouse</li>
+</ul>
+
+<h3>Recent Posts</h3>
+
+<ul>
+  
+  <li><a href="/blog/understanding-git-and-github/">Understanding Git And Github</a></li>
+  
+  <li><a href="/blog/lessons-learned-from-my-first-stupid-open-source-side-project/">Lessons Learned From My First Stupid Open Source Side Project</a></li>
+  
+  <li><a href="/blog/automate-critical-above-the-fold-css-authoring-and-embedding/">Automate Critical Above The Fold Css Authoring And Embedding</a></li>
+  
+  <li><a href="/blog/jekyll-and-grunt-boilerplate/">Jekyll And Grunt Boilerplate</a></li>
+  
+  <li><a href="/blog/a-small-collection-of-useful-sass-mixins/">A Small Collection Of Useful Sass Mixins</a></li>
+  
+</ul>
+
+	</div>
+</div>
+
+<footer class="footer">
+	<div class="sub-container-sidebar">
+		<div class="site-info">
+			Hand-Coded with ❤️ in Rome (Italy) using <a href="http://boxtent.top/" target="_blank">Boxtent</a> and <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.  // <a href="/cookies.html">Privacy and Cookie Policy </a>
+		</div>
+		<div class="footer-sep"></div>
+		<div class="social-cont">
+			<div class="social-box email">
+				<a href="mailto:omegaiori@gmail.com" target="_blank"> <i class="fa social-ico fa-envelope"> </i> </a>
+			</div>
+
+			<div class="social-box twitter">
+				<a href="https://twitter.com/vlrprbttst" target="_blank"> <i class="fa social-ico fa-twitter"> </i> </a>
+			</div>
+
+			<div class="social-box youtube">
+				<a href="https://www.youtube.com/user/valeriopierbattista" target="_blank"> <i class="fa social-ico fa-youtube"> </i> </a>
+			</div>
+
+			<div class="social-box instagram">
+				<a href="http://instagram.com/vlrprbttst" target="_blank"> <i class="fa social-ico fa-instagram"> </i> </a>
+			</div>
+
+			<div class="social-box linkedin">
+				<a href="https://it.linkedin.com/in/valeriopierbattista" target="_blank"> <i class="fa social-ico fa-linkedin"> </i> </a>
+			</div>
+
+			<div class="social-box github">
+				<a href="http://github.com/vlrprbttst" target="_blank"> <i class="fa social-ico fa-github"> </i> </a>
+			</div>
+
+			<div class="social-box codepen">
+				<a href="http://codepen.io/vlrprbttst" target="_blank"> <i class="fa social-ico fa-codepen"> </i> </a>
+			</div>
+
+			<div class="social-box cv">
+				<a href="http://valeriopierbattista.com/cv" target="_blank"> <i class="fa social-ico fa-file-text-o"> </i> </a>
+			</div>
+
+		</div>
+		<!-- /social-cont -->
+	</div>
+</footer>
+
+
+        <!-- build:js /js/production.min.js -->
+        <script src="/js/libs/jquery/dist/jquery.js"></script>
+        <script src="/js/custom/headroom.js"></script>
+        <script src="/js/custom/main.js"></script>
+        <!-- /build -->
+
+<script src="/js/custom/prism.js"></script>
+</body>
+</html>

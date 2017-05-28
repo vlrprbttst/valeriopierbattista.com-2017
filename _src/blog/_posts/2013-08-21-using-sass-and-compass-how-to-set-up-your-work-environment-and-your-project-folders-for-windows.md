@@ -1,3 +1,7 @@
+---
+post-description: For a newbie it's quite hard to figure out what you really need to do to make the whole thing work and start using.
+post-image: sass_compass.png
+---
 
 <img src="/images/blog/sass_compass.png" alt="sass_compass" class="cover" />
 

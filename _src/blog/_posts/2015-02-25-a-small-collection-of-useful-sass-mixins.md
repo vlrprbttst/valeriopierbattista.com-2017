@@ -1,4 +1,7 @@
-
+---
+post-description: A selection of just four useful mixins I think every front-end developer should consider using.
+post-image: seal-color-aef0354c-150x150.png
+---
 <img src="/images/blog/seal-color-aef0354c-150x150.png" style="width:120px;height:auto;float:left; margin-right:20px" alt="sass mixin" class="cover" />
 
 Everytime I create a new project, I always begin with some kind of starter-kit that includes the basics every

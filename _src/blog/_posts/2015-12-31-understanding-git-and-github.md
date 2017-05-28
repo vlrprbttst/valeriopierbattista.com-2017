@@ -1,3 +1,8 @@
+---
+post-description: Understanding what Git and Github are is one important step in the life of a developer. Let's start open sourcing!
+post-image: github.jpg
+---
+
 <img src="/images/blog/github.jpg" class="cover">
 
 Understanding what Git and Github are is one important step in the life of a developer. I used to keep my projects and files on my computer hard drive and **I had no way

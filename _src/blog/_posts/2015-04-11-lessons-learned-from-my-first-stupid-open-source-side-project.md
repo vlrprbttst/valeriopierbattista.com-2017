@@ -1,3 +1,8 @@
+---
+post-description: The idea for the project came up after reading about a guy getting paid to get drunk and evaluate the client's website's UX is an altered state.
+post-image: dux.png
+---
+
 <img src="/images/blog/dux.png" alt="dux" class="cover"/>
 
 It has been a while since I wanted to create an open source project, something just for fun and not necessarily <strong>useful</strong>.

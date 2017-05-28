@@ -1,11 +1,15 @@
+---
+post-description: I've been looking around for something like this but couldn't find it, that's why I decided to share my achievement on my blog.
+post-image: grunt-logo.svg
+---
 
 <img src="/images/blog/grunt-logo.svg" alt="grunt-logo" style="float:left;width:200px;margin:0 20px 0 0" class="cover" />
-This is a grunt boilerplate I developed and assembled for my needs. I’ve been looking around for something like this but couldn’t find it, that’s why I decided to share my achievement on my blog.
- If it’s your first read about grunt, please read this first instead: <a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">http://24ways.org/2013/grunt-is-not-weird-and-hard/</a> - this is a quite comprehensive guide on
- how to get started, what to install before using grunt on your machine, and it’s useful for the overall understanding of the basic concepts. I strongly recommend to start with that article before further reading.
- Once you’ve read and understood the basics, I’m supposing you have a general idea of what grunt does and how you feel like that article doesn’t cover everything you need. you clearly want more.
+This is a grunt boilerplate I developed and assembled for my needs. I've been looking around for something like this but couldn't find it, that's why I decided to share my achievement on my blog.
+ If it's your first read about grunt, please read this first instead: <a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">http://24ways.org/2013/grunt-is-not-weird-and-hard/</a> - this is a quite comprehensive guide on
+ how to get started, what to install before using grunt on your machine, and it's useful for the overall understanding of the basic concepts. I strongly recommend to start with that article before further reading.
+ Once you've read and understood the basics, I'm supposing you have a general idea of what grunt does and how you feel like that article doesn't cover everything you need. you clearly want more.
  <!--more-->
- Here’s my two cents:
+ Here's my two cents:
 
  <h2>My boilerplate</h2>
  My Grunt Boilerplate does the following things:
@@ -53,7 +57,7 @@ This is a grunt boilerplate I developed and assembled for my needs. I’ve been 
   updating  <code class="language-markup">production.min.js</code> .
 
 <span style="text-decoration: underline;">Sass processing with compass and autoprefixer</span><br><br>
- If you never heard of Sass it’s time to catch up! You can read about it in my other <a href="http://valeriopierbattista.com/blog/using-sass-and-compass-how-to-set-up-your-work-environment-and-your-project-folders-for-windows/">blog post</a>.
+ If you never heard of Sass it's time to catch up! You can read about it in my other <a href="http://valeriopierbattista.com/blog/using-sass-and-compass-how-to-set-up-your-work-environment-and-your-project-folders-for-windows/">blog post</a>.
   This grunt boilerplate processes  <code class="language-markup">sass</code>  into  <code class="language-markup">main.css</code>  located in the “<strong>css</strong>” folder
    and then applies <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> to the result. <strong>Compass</strong> is supported. If you want to edit the output format or add sass
     plugins in the mix, you can do it directly  in the  <code class="language-markup">gruntfile.js</code>  :
@@ -79,7 +83,7 @@ sass : {
  - <strong>src</strong>: contains the uncompressed images you save from photoshop
 - <strong>dist</strong>: contains the compressed images (the ones you will link to in your project)
  Every time you save an image in the <strong>src</strong> folder (or in its subfolders), it will be compressed and saved in the <strong>dist</strong> folder. This will occur only when you add a new image to the <strong>src</strong>
-  folder and only the <a href="https://github.com/tschaub/grunt-newer">newer</a> image will be compressed. What if you don’t need an image anymore? Just <a href="https://github.com/taylorcode/grunt-delete-sync">delete it</a>
+  folder and only the <a href="https://github.com/tschaub/grunt-newer">newer</a> image will be compressed. What if you don't need an image anymore? Just <a href="https://github.com/taylorcode/grunt-delete-sync">delete it</a>
   from the src folder and the dist folder will be updated accordingly.
  <strong>WARNING</strong>: if you start your project with an empty src folder, imagemin may not trigger.
  Hit  <code class="language-markup">ctrl+c</code>  then type  <code class="language-markup">Y</code> to exit grunt. Type  <code class="language-markup">grunt imagemin</code> .

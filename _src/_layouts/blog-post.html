@@ -8,14 +8,23 @@
 <html lang="en">
 
 <head>
- {% include head.html %}
- <meta property="og:title" content="{{ page.title }}">
- <meta property="og:type" content="article">
- <meta property="og:url" content="http://www.valeriopierbattista.com{{ page.url }}">
- <meta property="og:image" content="http://www.valeriopierbattista.com/images/facebook-image.png">
- <meta property="og:description" content="A blog post by Valerio Pierbattista">
- <meta property="og:site_name" content="http://valeriopierbattista.com/">
- <meta http-equiv="content-language" content="EN">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.post-description }}">
+    {% include head.html %}
+    
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.valeriopierbattista.com{{ page.url }}">
+    <meta property="og:image" content="http://www.valeriopierbattista.com/images/blog/{{page.post-image}}">
+    <meta property="og:description" content="{{page.post-description}}">
+    <meta property="og:site_name" content="http://valeriopierbattista.com/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="http://www.valeriopierbattista.com{{ page.url }}">
+    <meta name="twitter:creator" content="@vlrprbttst">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{page.post-description}}">
+    <meta name="twitter:image" content="http://www.valeriopierbattista.com/images/blog/{{page.post-image}}">
 </head>
 
 <body class="container">

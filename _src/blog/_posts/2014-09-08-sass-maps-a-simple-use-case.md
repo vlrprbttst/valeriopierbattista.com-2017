@@ -1,3 +1,7 @@
+---
+post-description: I just recently discovered and used Sass Maps, which are basically arrays of values which can be intelligently used to write less code in particular situations.
+post-image: Screenshot_1.png
+---
 
 I just recently discovered and used Sass Maps, which are basically arrays of values which can be intelligently used to write less code in particular situations. This is just one use case that was useful for me and may be
  useful for you to understand the power of <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps">Sass Maps</a>.

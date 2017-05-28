@@ -1,3 +1,7 @@
+---
+post-description: Jekyll is great, and it gets even better with Grunt automating repetitive tasks.
+post-image: gruntjekyll.png
+---
 
 <img title="jekyll and grunt boilerplate" src="/images/blog/gruntjekyll.png" alt="jekyll and grunt boilerplate" class="cover"/>
 

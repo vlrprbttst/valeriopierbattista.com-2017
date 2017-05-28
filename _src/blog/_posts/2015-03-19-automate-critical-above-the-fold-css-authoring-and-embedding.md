@@ -1,4 +1,7 @@
-
+---
+post-description: A couple of key factors for speed are how you serve css and javascript in your page.
+post-image: penthouse.jpg
+---
 <img src="/images/blog/penthouse.jpg" alt="penthouse" class="cover" />
 
 We all know the best way to serve our website to our audience is to serve it <strong>fast</strong>, as fast as humanly possible. A couple of key factors for speed are how you serve css and javascript in your page. One thing Google suggests to do

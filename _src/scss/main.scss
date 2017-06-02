@@ -84,6 +84,7 @@ body {
     align-items: stretch;
     @include respond-to(90) {
         flex-flow: column;
+        padding: span(1)  span(.6);
     }
   }
   .work-item {
@@ -107,6 +108,7 @@ body {
     }
     @include respond-to(90) {
         flex: 0 1 100%;
+        margin: 0 0 rhythm(1);
     }
   }
 }

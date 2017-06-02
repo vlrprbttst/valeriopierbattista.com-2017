@@ -585,7 +585,8 @@ body {
     @media all and (max-width: 90em) {
       .sub-container.work {
         -ms-flex-flow: column;
-            flex-flow: column; } }
+            flex-flow: column;
+        padding: 8.33333% 5%; } }
   .sub-container .work-item {
     -ms-flex: 0 1 48%;
         flex: 0 1 48%;
@@ -604,7 +605,8 @@ body {
     @media all and (max-width: 90em) {
       .sub-container .work-item {
         -ms-flex: 0 1 100%;
-            flex: 0 1 100%; } }
+            flex: 0 1 100%;
+        margin: 0 0 1.5em; } }
 
 h1 {
   font-size: 2.25em;

@@ -78,11 +78,13 @@ body {
     float: none;
   }
   &.work {
-    
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: stretch;
+    @include respond-to(90) {
+        flex-flow: column;
+    }
   }
   .work-item {
       flex: 0 1 48%;
@@ -90,7 +92,6 @@ body {
       padding: rhythm(1);
       box-shadow: 0 0 5px rgba(0,0,0,.155);
       margin-bottom: 2%;
-
 
     img {
       margin: 0 0 rhythm(1);
@@ -105,11 +106,7 @@ body {
         margin:0 auto;
     }
     @include respond-to(90) {
-    //   @include span(9 of 9);
-    //   &:nth-child(odd),
-    //     &:nth-child(even) {
-    //     margin: 0 0 span(.5) 0;
-    //   }
+        flex: 0 1 100%;
     }
   }
 }

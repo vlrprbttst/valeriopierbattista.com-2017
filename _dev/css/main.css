@@ -582,6 +582,10 @@ body {
         justify-content: space-around;
     -ms-flex-align: stretch;
         align-items: stretch; }
+    @media all and (max-width: 90em) {
+      .sub-container.work {
+        -ms-flex-flow: column;
+            flex-flow: column; } }
   .sub-container .work-item {
     -ms-flex: 0 1 48%;
         flex: 0 1 48%;
@@ -597,6 +601,10 @@ body {
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
     .sub-container .work-item:last-child {
       margin: 0 auto; }
+    @media all and (max-width: 90em) {
+      .sub-container .work-item {
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%; } }
 
 h1 {
   font-size: 2.25em;

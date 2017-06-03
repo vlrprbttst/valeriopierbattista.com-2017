@@ -126,6 +126,11 @@ body {
 
         .work-item-footer {
             margin-top: auto;
+            border-top:1px solid whitesmoke;
+        }
+
+        .work-item-footer p:last-child {
+            margin-bottom: 0;
         }
 
         img {
@@ -224,6 +229,7 @@ blockquote {
     @include adjust-font-size-to(16px,1.2);
     font-style: italic;
 }
+
 @import "partials/_social-icons.scss";
 
 .footer {

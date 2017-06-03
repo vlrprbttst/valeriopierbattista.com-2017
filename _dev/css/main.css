@@ -608,7 +608,10 @@ body {
       -ms-flex-negative: 0;
           flex-shrink: 0; }
     .sub-container .work-item .work-item-footer {
-      margin-top: auto; }
+      margin-top: auto;
+      border-top: 1px solid whitesmoke; }
+    .sub-container .work-item .work-item-footer p:last-child {
+      margin-bottom: 0; }
     .sub-container .work-item img {
       margin: 0 0 1.5em; }
     .sub-container .work-item p span {

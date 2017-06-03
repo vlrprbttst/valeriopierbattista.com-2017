@@ -490,8 +490,8 @@ html {
   height: 100%; }
 
 *,
-*:before,
-*:after {
+*:after,
+*:before {
   box-sizing: inherit; }
 
 .row:after {
@@ -602,7 +602,7 @@ body {
         flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-    .sub-container .work-item .work-item-image-container, .sub-container .work-item .work-item-body-container, .sub-container .work-item .work-item-footer {
+    .sub-container .work-item .work-item-body-container, .sub-container .work-item .work-item-footer, .sub-container .work-item .work-item-image-container {
       height: auto;
       width: 100%;
       -ms-flex-negative: 0;
@@ -653,18 +653,18 @@ h3 {
   line-height: 1.71429em;
   font-weight: 700; }
 
-p,
-li {
+li,
+p {
   font-size: 1em;
   line-height: 1.8em;
   font-weight: 400; }
   @media all and (max-width: 30em) {
-    p,
-    li {
+    li,
+    p {
       font-size: 0.875em;
       line-height: 1.71429em; } }
-  p code,
-  li code {
+  li code,
+  p code {
     background: #eee;
     padding: 0 5px;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
@@ -677,13 +677,13 @@ ul li p {
       font-size: 1em;
       line-height: 1.8em; } }
 
-pre,
-code {
+code,
+pre {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !important; }
 
 a,
-a:visited,
-a:active {
+a:active,
+a:visited {
   color: #F44336;
   text-decoration: none; }
 
@@ -749,8 +749,8 @@ blockquote {
       padding: 1.5em 0;
       position: static; } }
   .footer a,
-  .footer a:visited,
-  .footer a:hover {
+  .footer a:hover,
+  .footer a:visited {
     color: #FFFFFF;
     text-decoration: underline; }
 
@@ -781,9 +781,9 @@ blockquote {
   margin: 0 auto;
   width: auto;
   max-width: auto; }
-#twitter-feed h1,
+#twitter-feed .tweetprofilelink,
 #twitter-feed .twitter-pic,
-#twitter-feed .tweetprofilelink {
+#twitter-feed h1 {
   display: none; }
 #twitter-feed .twitter-text {
   padding: 0 10px; }
@@ -805,12 +805,12 @@ blockquote {
   display: table;
   clear: both; }
 #instafeed a,
-#instafeed a:visited,
-#instafeed a:active {
+#instafeed a:active,
+#instafeed a:visited {
   color: #727272 !important; }
   #instafeed a:hover,
-  #instafeed a:visited:hover,
-  #instafeed a:active:hover {
+  #instafeed a:active:hover,
+  #instafeed a:visited:hover {
     text-decoration: none; }
 
 .insta-wrapper {

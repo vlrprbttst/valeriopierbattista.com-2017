@@ -586,7 +586,7 @@ body {
       .sub-container.work {
         -ms-flex-flow: column;
             flex-flow: column;
-        padding: 8.33333% 5%; } }
+        padding: 1.5em 5%; } }
   .sub-container .work-item {
     -ms-flex: 0 1 48%;
         flex: 0 1 48%;
@@ -606,8 +606,6 @@ body {
       background: #eee;
       color: #212121;
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
-    .sub-container .work-item:last-child {
-      margin: 0 auto; }
     @media all and (max-width: 90em) {
       .sub-container .work-item {
         -ms-flex: 0 1 100%;

@@ -84,7 +84,7 @@ body {
     align-items: stretch;
     @include respond-to(90) {
         flex-flow: column;
-        padding: span(1)  span(.6);
+        padding: rhythm(1)  span(.6);
     }
   }
   .work-item {
@@ -107,10 +107,6 @@ body {
       background: #eee;
       color: $primaryTextColor;
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    }
-
-    &:last-child {
-        margin:0 auto;
     }
     @include respond-to(90) {
         flex: 0 1 100%;

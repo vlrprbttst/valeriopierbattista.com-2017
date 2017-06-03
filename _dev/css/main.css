@@ -593,7 +593,13 @@ body {
     background: #FFFFFF;
     padding: 1.5em;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.155);
-    margin-bottom: 2%; }
+    margin-bottom: 2%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    .sub-container .work-item .work-item-footer {
+      margin-top: auto; }
     .sub-container .work-item img {
       margin: 0 0 1.5em; }
     .sub-container .work-item p span {

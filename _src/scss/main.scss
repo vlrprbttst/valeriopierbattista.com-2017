@@ -93,6 +93,12 @@ body {
       padding: rhythm(1);
       box-shadow: 0 0 5px rgba(0,0,0,.155);
       margin-bottom: 2%;
+      display:flex;
+      flex-direction:column;
+
+      .work-item-footer {
+          margin-top: auto;
+      }
 
     img {
       margin: 0 0 rhythm(1);

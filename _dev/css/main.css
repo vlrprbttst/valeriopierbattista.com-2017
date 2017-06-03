@@ -589,8 +589,9 @@ body {
             flex-flow: column;
         padding: 1.5em 5%; } }
   .sub-container .work-item {
-    -ms-flex: 0 1 48%;
-        flex: 0 1 48%;
+    -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+    width: 48%;
     background: #FFFFFF;
     padding: 1.5em;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.155);

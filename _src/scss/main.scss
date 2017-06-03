@@ -90,7 +90,10 @@ body {
     }
   }
   .work-item {
-      flex: 0 1 48%;
+      flex: 0 1 auto;
+      // width instead of flex-basis for ie10-11
+      //https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
+      width: 48%;
       background: $textPrimaryColor;
       padding: rhythm(1);
       box-shadow: 0 0 5px rgba(0,0,0,.155);
@@ -105,6 +108,8 @@ body {
           &-body-container,
           &-footer {
               //fix for ie10-11
+              //https://github.com/philipwalton/flexbugs#6-the-default-flex-value-has-changed
+              //always set shrink to 0
               height: auto;
                width: 100%;
                flex-shrink:0;

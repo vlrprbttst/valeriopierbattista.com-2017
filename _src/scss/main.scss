@@ -128,7 +128,8 @@ body {
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     }
     @include respond-to(90) {
-        flex: 0 1 100%;
+        flex: 0 1 auto;
+        width: 100%;
         margin: 0 0 rhythm(1);
     }
   }

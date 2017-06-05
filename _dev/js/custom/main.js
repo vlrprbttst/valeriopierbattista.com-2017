@@ -110,6 +110,30 @@ $(window).smartresize(function() {
   mobileMenu();
 });
 
+//share popup
+
+$(".js-share-popup").click(function() {
+  var leftPosition, topPosition;
+  leftPosition = window.screen.width / 2 - (566 / 2 + 10);
+  topPosition = window.screen.height / 2 - (576 / 2 + 50);
+  var url = $(this).data("href");
+
+  window.open(
+    url,
+    'name_' + Math.random(),
+    "status = 1, height = 576, width = 566, resizable = 0,left=" +
+      leftPosition +
+      ",top=" +
+      topPosition +
+      ",screenX=" +
+      leftPosition +
+      ",screenY=" +
+      topPosition +
+      ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no"
+  );
+});
+
+
 // google analytics
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

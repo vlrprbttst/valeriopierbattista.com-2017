@@ -117,9 +117,10 @@ $(".js-share-popup").click(function() {
   leftPosition = window.screen.width / 2 - (566 / 2 + 10);
   topPosition = window.screen.height / 2 - (576 / 2 + 50);
   var url = $(this).data("href");
+
   window.open(
     url,
-    "myWindow",
+    'name_' + Math.random(),
     "status = 1, height = 576, width = 566, resizable = 0,left=" +
       leftPosition +
       ",top=" +

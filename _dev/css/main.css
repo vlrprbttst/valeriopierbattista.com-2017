@@ -775,46 +775,63 @@ blockquote {
     .footer-sep {
       margin: 1.5em 0 0; } }
 
-#twitter-feed:after {
-  content: "";
-  display: table;
-  clear: both; }
-#twitter-feed img {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  max-width: auto; }
-#twitter-feed .tweetprofilelink,
-#twitter-feed .twitter-pic,
-#twitter-feed h1 {
-  display: none; }
-#twitter-feed .twitter-text {
-  padding: 0 10px; }
-  @media (max-width: 48em) {
-    #twitter-feed .twitter-text {
-      padding: 0; } }
-#twitter-feed .twitter-article {
-  margin: 0;
-  float: left;
-  width: 33.3333%; }
-  @media all and (max-width: 48em) {
-    #twitter-feed .twitter-article {
-      float: none;
-      margin-bottom: 1.5em;
-      width: 100%; } }
+#twitter-feed {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  #twitter-feed:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media all and (max-width: 80em) {
+    #twitter-feed {
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; } }
+  #twitter-feed img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    max-width: auto; }
+  #twitter-feed .tweetprofilelink,
+  #twitter-feed .twitter-pic,
+  #twitter-feed h1 {
+    display: none; }
+  #twitter-feed .twitter-text {
+    padding: 0 10px; }
+    @media (max-width: 48em) {
+      #twitter-feed .twitter-text {
+        padding: 0; } }
+  #twitter-feed .twitter-article {
+    margin: 0;
+    width: 31%;
+    background: #FFFFFF;
+    padding: 0 1.5em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.155); }
+    @media all and (max-width: 80em) {
+      #twitter-feed .twitter-article {
+        margin-bottom: 1.5em;
+        width: 100%; } }
 
-#instafeed:after {
-  content: "";
-  display: table;
-  clear: both; }
-#instafeed a,
-#instafeed a:active,
-#instafeed a:visited {
-  color: #727272 !important; }
-  #instafeed a:hover,
-  #instafeed a:active:hover,
-  #instafeed a:visited:hover {
-    text-decoration: none; }
+#instafeed {
+  background: #FFFFFF;
+  padding: 1.5em 1.5em 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.155);
+  margin-bottom: 1.5em; }
+  #instafeed:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #instafeed a,
+  #instafeed a:active,
+  #instafeed a:visited {
+    color: #727272 !important; }
+    #instafeed a:hover,
+    #instafeed a:active:hover,
+    #instafeed a:visited:hover {
+      text-decoration: none; }
 
 .insta-wrapper {
   width: 33.33333%;
@@ -848,11 +865,15 @@ img {
     background: #A62038;
     padding: 10px; }
 
-.now-playing span {
-  color: #727272;
-  font-size: 0.75em;
-  line-height: 3em;
-  display: block; }
+.now-playing {
+  background: #FFFFFF;
+  padding: 0.375em 1.5em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.155); }
+  .now-playing span {
+    color: #727272;
+    font-size: 0.75em;
+    line-height: 3em;
+    display: block; }
 
 /*
 * easily control equalizer width, height and * color with the following variables

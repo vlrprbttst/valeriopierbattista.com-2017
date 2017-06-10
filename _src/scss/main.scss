@@ -48,7 +48,8 @@ body {
 }
 
 .personal-description-cont {
-    @include clearfix
+    @include clearfix;
+
 }
 
 .sub-container-sidebar {
@@ -283,7 +284,12 @@ blockquote {
 
 #twitter-feed {
     @include clearfix;
-
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+    @include respond-to(80) {
+        flex-flow:row wrap;
+    }
     img {
         display: block;
         margin: 0 auto;
@@ -306,10 +312,11 @@ blockquote {
 
     .twitter-article {
         margin: 0;
-        float: left;
-        width: 33.3333%;
-        @include respond-to(48) {
-            float: none;
+        width: 31%;
+        background: $textPrimaryColor;
+        padding: 0 rhythm(1);
+        box-shadow: 0 0 5px rgba(0,0,0,.155);
+        @include respond-to(80) {
             margin-bottom: rhythm(1);
             width: 100%;
         }
@@ -318,7 +325,10 @@ blockquote {
 
 #instafeed {
     @include clearfix;
-
+    background: $textPrimaryColor;
+    padding: rhythm(1) rhythm(1) 0;
+    box-shadow: 0 0 5px rgba(0,0,0,.155);
+    margin-bottom: rhythm(1);
     a,
     a:active,
     a:visited {
@@ -371,6 +381,10 @@ img {
 }
 
 .now-playing {
+    background: $textPrimaryColor;
+    padding: rhythm(.25) rhythm(1);
+    box-shadow: 0 0 5px rgba(0,0,0,.155);
+
     span {
         color: $secondaryTextColor;
         @include adjust-font-size-to(12px,1.5);

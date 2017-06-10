@@ -820,23 +820,18 @@ blockquote {
       #twitter-feed .twitter-text {
         padding: 0; } }
 
-#instafeed {
-  background: #FFFFFF;
-  padding: 1.5em 1.5em 0;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.155);
-  margin-bottom: 1.5em; }
-  #instafeed:after {
-    content: "";
-    display: table;
-    clear: both; }
-  #instafeed a,
-  #instafeed a:active,
-  #instafeed a:visited {
-    color: #727272 !important; }
-    #instafeed a:hover,
-    #instafeed a:active:hover,
-    #instafeed a:visited:hover {
-      text-decoration: none; }
+#instafeed:after {
+  content: "";
+  display: table;
+  clear: both; }
+#instafeed a,
+#instafeed a:active,
+#instafeed a:visited {
+  color: #727272 !important; }
+  #instafeed a:hover,
+  #instafeed a:active:hover,
+  #instafeed a:visited:hover {
+    text-decoration: none; }
 
 .insta-wrapper {
   width: 33.33333%;

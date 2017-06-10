@@ -330,10 +330,7 @@ blockquote {
 
 #instafeed {
     @include clearfix;
-    background: $textPrimaryColor;
-    padding: rhythm(1) rhythm(1) 0;
-    box-shadow: 0 0 5px rgba(0,0,0,.155);
-    margin-bottom: rhythm(1);
+    
     a,
     a:active,
     a:visited {

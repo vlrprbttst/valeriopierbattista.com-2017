@@ -778,18 +778,33 @@ blockquote {
 #twitter-feed {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  -ms-flex-align: stretch;
+      align-items: stretch; }
   #twitter-feed:after {
     content: "";
     display: table;
     clear: both; }
   @media all and (max-width: 80em) {
     #twitter-feed {
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap; } }
+      display: block; } }
+  #twitter-feed .twitter-article {
+    width: 31%;
+    -ms-flex: 0 0 31%;
+        flex: 0 0 31%;
+    background: #FFFFFF;
+    padding: 0 1.5em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.155); }
+    @media all and (max-width: 80em) {
+      #twitter-feed .twitter-article {
+        margin-bottom: 1.5em;
+        width: 100%;
+        -ms-flex: none;
+            flex: none;
+        padding: 0.75em 1.5em; } }
   #twitter-feed img {
     display: block;
     margin: 0 auto;
@@ -804,16 +819,6 @@ blockquote {
     @media (max-width: 48em) {
       #twitter-feed .twitter-text {
         padding: 0; } }
-  #twitter-feed .twitter-article {
-    margin: 0;
-    width: 31%;
-    background: #FFFFFF;
-    padding: 0 1.5em;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.155); }
-    @media all and (max-width: 80em) {
-      #twitter-feed .twitter-article {
-        margin-bottom: 1.5em;
-        width: 100%; } }
 
 #instafeed {
   background: #FFFFFF;

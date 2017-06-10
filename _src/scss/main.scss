@@ -285,11 +285,27 @@ blockquote {
 #twitter-feed {
     @include clearfix;
     display:flex;
-    flex-flow:row nowrap;
+    flex-flow:row wrap;
     justify-content: space-between;
+    align-items: stretch;
     @include respond-to(80) {
-        flex-flow:row wrap;
+        display: block;
     }
+
+    .twitter-article {
+        width: 31%;
+        flex: 0 0 31%;
+        background: $textPrimaryColor;
+        padding: 0 rhythm(1);
+        box-shadow: 0 0 5px rgba(0,0,0,.155);
+        @include respond-to(80) {
+            margin-bottom: rhythm(1);
+            width: 100%;
+            flex: none;
+            padding: rhythm(.5) rhythm(1);
+        }
+    }
+
     img {
         display: block;
         margin: 0 auto;
@@ -310,17 +326,6 @@ blockquote {
         }
     }
 
-    .twitter-article {
-        margin: 0;
-        width: 31%;
-        background: $textPrimaryColor;
-        padding: 0 rhythm(1);
-        box-shadow: 0 0 5px rgba(0,0,0,.155);
-        @include respond-to(80) {
-            margin-bottom: rhythm(1);
-            width: 100%;
-        }
-    }
 }
 
 #instafeed {

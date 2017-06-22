@@ -38,7 +38,7 @@ $('#bars').click(function() {
 
 function navHeight() {
 	var heights = window.innerHeight;
-	var outerHeights = $(".this-sidebar .sub-container-sidebar").outerHeight(true) + $("footer .sub-container-sidebar").outerHeight(true);
+	var outerHeights = $(".sidebar .sub-container-sidebar").outerHeight(true) + $("footer .sub-container-sidebar").outerHeight(true);
 	$('nav.nav ul').css('height', (heights - outerHeights) + "px");
 };
 
@@ -92,7 +92,7 @@ function eraseCookie(name) {
 // headroom
 function mobileMenu() {
 	var wWidth = $(window).width();
-	var myElement = document.querySelector(".this-sidebar");
+	var myElement = document.querySelector(".sidebar");
 	var headroom = new Headroom(myElement, {
 		"offset" : 200,
 		"tolerance" : 5

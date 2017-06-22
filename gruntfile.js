@@ -139,7 +139,8 @@ module.exports = function(grunt) {
 
             partials: {
                 options: {
-                    // require: 'plugins?'
+                    require: 'susy',
+                    compass: true
                 },
                 files: {
                     '<%= dev %>/<%= css %>/main.css': '<%= source %>/<%= scss %>/main.scss'

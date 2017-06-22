@@ -358,7 +358,39 @@ html {
 *, *:before, *:after {
   box-sizing: border-box; }
 
-/* main navigation */
+html {
+  box-sizing: border-box;
+  height: 100%; }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: #f9f9f9;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-overflow-scrolling: touch; }
+  body:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  @media all and (max-width: 64em) {
+    body {
+      padding: 101px 0 0; } }
+
 .this-sidebar {
   width: 25%;
   float: left;
@@ -484,39 +516,6 @@ nav ul {
     .headroom.headroom--pinned {
       -ms-transform: translateY(0);
           transform: translateY(0); } }
-
-html {
-  box-sizing: border-box;
-  height: 100%; }
-
-*,
-*:after,
-*:before {
-  box-sizing: inherit; }
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  min-height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background: #f9f9f9;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-overflow-scrolling: touch; }
-  body:after {
-    content: " ";
-    display: block;
-    clear: both; }
-  @media all and (max-width: 64em) {
-    body {
-      padding: 101px 0 0; } }
 
 .profile-pic {
   max-width: 160px;
@@ -1019,6 +1018,58 @@ img {
   clear: both;
   width: 100%; }
 
+#info_cookie {
+  background: #222;
+  color: white;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+  @media all and (min-width: 1025px) {
+    #info_cookie {
+      position: static;
+      float: right;
+      width: 75%; } }
+
+.cookie-btn {
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 14px;
+  background: white;
+  background-image: linear-gradient(to top, #eeeeee, #ffffff);
+  color: black;
+  margin: 10px 0 0 0;
+  border-radius: 3px;
+  border-bottom: 2px solid lightgrey;
+  text-transform: capitalize;
+  cursor: pointer; }
+  .cookie-btn:nth-child(3) {
+    margin: 0 0 0 10px; }
+  .cookie-btn a {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit; }
+    .cookie-btn a:active, .cookie-btn a:focus {
+      outline: none; }
+    .cookie-btn a:hover {
+      color: inherit;
+      text-decoration: inherit;
+      cursor: inherit; }
+      .cookie-btn a:hover:active, .cookie-btn a:hover:focus {
+        outline: none; }
+
+.cookie-hidden {
+  display: none !important; }
+
+.cookie-visible {
+  display: block !important; }
+
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+scss */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
@@ -1130,57 +1181,5 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help; }
-
-#info_cookie {
-  background: #222;
-  color: white;
-  padding: 10px 20px;
-  font-size: 12px;
-  line-height: 16px;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  text-align: center;
-  position: fixed;
-  z-index: 999;
-  bottom: 0;
-  left: 0;
-  width: 100%; }
-  @media all and (min-width: 1025px) {
-    #info_cookie {
-      position: static;
-      float: right;
-      width: 75%; } }
-
-.cookie-btn {
-  display: inline-block;
-  padding: 5px 20px;
-  font-size: 14px;
-  background: white;
-  background-image: linear-gradient(to top, #eeeeee, #ffffff);
-  color: black;
-  margin: 10px 0 0 0;
-  border-radius: 3px;
-  border-bottom: 2px solid lightgrey;
-  text-transform: capitalize;
-  cursor: pointer; }
-  .cookie-btn:nth-child(3) {
-    margin: 0 0 0 10px; }
-  .cookie-btn a {
-    color: inherit;
-    text-decoration: inherit;
-    cursor: inherit; }
-    .cookie-btn a:active, .cookie-btn a:focus {
-      outline: none; }
-    .cookie-btn a:hover {
-      color: inherit;
-      text-decoration: inherit;
-      cursor: inherit; }
-      .cookie-btn a:hover:active, .cookie-btn a:hover:focus {
-        outline: none; }
-
-.cookie-hidden {
-  display: none !important; }
-
-.cookie-visible {
-  display: block !important; }
 
 /*# sourceMappingURL=main.css.map */

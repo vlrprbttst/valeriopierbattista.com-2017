@@ -8,8 +8,8 @@
 <html lang="en">
 
 <head>
-    <title>The Free Alternative To Codekit Prepros Compiles Sass Compass And Haml</title>
-    <meta name="description" content="No more command line non-sense with Prepros!">
+    <title>A Frontend Workflow For Static Websites</title>
+    <meta name="description" content="">
     <meta charset="utf-8">
 <script src="https://use.fontawesome.com/99fde4e73f.js"></script>
 <link href="/css/main.css" rel="stylesheet" type="text/css">
@@ -27,19 +27,19 @@
 <meta name="theme-color" content="#ffffff">
 
 
-    <meta property="og:title" content="The Free Alternative To Codekit Prepros Compiles Sass Compass And Haml">
+    <meta property="og:title" content="A Frontend Workflow For Static Websites">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.valeriopierbattista.com/blog/the-free-alternative-to-codekit-prepros-compiles-sass-compass-and-haml/">
-    <meta property="og:image" content="http://www.valeriopierbattista.com/images/blog/prepros.png">
-    <meta property="og:description" content="No more command line non-sense with Prepros!">
+    <meta property="og:url" content="http://www.valeriopierbattista.com/blog/a-frontend-workflow-for-static-websites/">
+    <meta property="og:image" content="http://www.valeriopierbattista.com/images/blog/">
+    <meta property="og:description" content="">
     <meta property="og:site_name" content="http://valeriopierbattista.com/">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="http://www.valeriopierbattista.com/blog/the-free-alternative-to-codekit-prepros-compiles-sass-compass-and-haml/">
+    <meta name="twitter:site" content="http://www.valeriopierbattista.com/blog/a-frontend-workflow-for-static-websites/">
     <meta name="twitter:creator" content="@vlrprbttst">
-    <meta name="twitter:title" content="The Free Alternative To Codekit Prepros Compiles Sass Compass And Haml">
-    <meta name="twitter:description" content="No more command line non-sense with Prepros!">
-    <meta name="twitter:image" content="http://www.valeriopierbattista.com/images/blog/prepros.png">
+    <meta name="twitter:title" content="A Frontend Workflow For Static Websites">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://www.valeriopierbattista.com/images/blog/">
 </head>
 
 <body class="container">
@@ -91,60 +91,81 @@
 <div class="page-container">
 	<div class="sub-container blog blog-post">
 		<div class="entry">
-			<h1>The Free Alternative To Codekit Prepros Compiles Sass Compass And Haml</h1>
-			<span class="date"><i class="fa fa-clock-o"></i> August 29, 2013</span>
-			<p><img src="/images/blog/prepros.png" alt="optimized-by-tinypng" style="width:200px;float:left;margin-right:20px" class="cover" /></p>
+			<h1>A Frontend Workflow For Static Websites</h1>
+			<span class="date"><i class="fa fa-clock-o"></i> June 25, 2017</span>
+			<p><img src="/images/blog/boxtent.jpg" class="cover" /></p>
 
-<p>No more command line non-sense with Prepros! YAY! One thing i love about Prepros is how easy it is: just add a project, specify where your sass, js and html files are and you are good to go, Prepros will compile the rest. And it compiles HAML too! Gettingstarted is easy and <a href="http://alphapixels.com/prepros/docs/" target="_blank">the official documentation</a> is pretty complete,  i’ve learnt how to use the software lightning-fast reading the docs section of the website. In this post i will highlight the features I think are the most interesting.</p>
+<p>I’ve created and launched BoxTent around a year ago and after using it on many projects I now have a solid understanding of its potential, that’s why I’ve decided to write a blog post about it.</p>
+
+<p><a href="http://boxtent.top">BoxTent</a> is not a framework of any sort, it could be described more as an highly automated workflow, designed to build simple static websites with performance in mind. Every time I started a new project I would always ended up setting a similar work environment, one that took care of the SAMO© stuff like sass support, javascript concatenation, assets optimization and so on. I’ve decided to optimize the time involved in setting up the work environment and the task management, that’s how <a href="http://boxtent.top">BoxTent</a> was born.</p>
 
 <!--more-->
-<h2>Getting Started</h2>
-<p>Download the software at <a href="http://alphapixels.com/prepros/" target="_blank">http://alphapixels.com/prepros/</a> , install and open it.</p>
 
-<p><img src="/images/blog/first.png" alt="first" /></p>
+<h2 id="when-should-i-use-boxtent">When should I use BoxTent.</h2>
 
-<p>Now set-up your first project dragging and dropping the folder into the window or clicking the PLUS button on the top right menu.
-<a href="/images/downloads/prepros-testing.zip">You can download the sample project I used for this demo clicking here!</a> Once you’re done, Prepros will scan your uploaded folder and put your to-be-processed files in the main window</p>
+<p>BoxTent is definitely for you if:</p>
 
-<p><img src="/images/blog/openproject.png" alt="openproject" /></p>
+<ul>
+  <li>you are building a small, static website using simple HTML, CSS and JAVASCRIPT (a personal portfolio for example)</li>
+  <li>you care about performant code (minification, assets optimization, javascript concatenation)</li>
+  <li>You don’t have a deploy procedure, you just drag and drop your website files via FTP</li>
+  <li>You want to use <a href="https://gruntjs.com/">Grunt</a> as you like to automate-all-the-things</li>
+</ul>
 
-<p>You can specify a number of options that are strictly related to the current project you’re working in, you can view the option window clicking the gear icon on the bottom left-menu (that’s your project related menu)</p>
+<p>That’s exactly BoxTent’s <em>forte</em>, as you get out of the box support for:</p>
 
-<p><img src="/images/blog/project-specific-options.png" alt="project-specific-options" /></p>
+<ul>
+  <li><code>.scss</code> support and compilation. You can easily extend your <code>gruntfile.js</code> to support any sass plugins such as <a href="http://compass-style.org/">compass</a>, <a href="http://susy.oddbird.net/">susy</a> or any other.</li>
+  <li>images optimization and compression</li>
+  <li>minification for <code>.html</code>, <code>.css</code> and <code>.js</code> files</li>
+  <li><code>.js</code> files compression and concatenation in a single production minified file</li>
+  <li>you can use includes in HTML</li>
+  <li>you don’t have to care about CSS vendor prefixes, you can choose the desired browser support and autoprefixer will do the rest…</li>
+  <li>…And much, much more!</li>
+</ul>
 
-<p>One GREAT feature Prepros has is the <strong>live refresh option</strong>. Once the files are compiled, your browser will automatically refresh so you can see the changes without hitting f5, or f9, or ctrl+f5, or ctrl+r like a mad man. You can see the live refresh in action using the Prepros debug engine clicking on the globe icon. You can also select your output folders in the second tab and the third tab as an interesting filter option that allows you to exclude certain files from the project based on comma-separated names. One great other feature I love about this software is the image optimization engine. Clicking on the photo icon, Prepros will recognize all the images of your project and will losslessly optimize it!</p>
+<p>You work is conveniently split into an <code>_src</code> folder with your source files, a <code>_dev</code> folder with your processed-but-not-production-ready files and finally, typing the <code>grunt build</code> command, the whole site gets optimized in the <code>_site</code> folder, ready for production.</p>
 
-<p><img src="/images/blog/imageopti.png" alt="imageopti" /></p>
+<h2 id="boxtent--jekyll">BoxTent + Jekyll</h2>
 
-<p>I’ve done a quick test on image optimization and the compression is quite OK. I optimized the same PNG file with Prepros and TinyPng.org (see my <a title="Lossless PNG compression the quick way" href="http://valeriopierbattista.com/blog/lossless-png-compression-the-quick-way/">previous post </a>for
-more info) and well, TinyPNG.org wins. But still, you have a quick tool to fairly optimize your pngs, and it does gifs and jpgs too!</p>
-<h2>What about JS?</h2>
-<p>Prepros does great on JS too! It automatically minifies and concatenates your js files into ONE if you want, and is intelligent enough to ignore the already minified js in your folders. I won’t go deep in this because <a href="http://alphapixels.com/prepros/docs/js-concat-minify.html" target="_blank">the docs section on the official website</a> explains everything and is pretty straight forward.</p>
-<h2> Some advice</h2>
-<p>Setting default overall options from the top right menu won’t work for me. I got stuff set there, but opening a new project won’t keep that options. I suggest you click on single files in your main window and choose the options you prefer for each one</p>
+<p><a href="https://jekyllrb.com/">Jekyll</a> is great, I just love it. What I don’t like though, is the following:</p>
 
-<p><img src="/images/blog/fullcompass-support.png" alt="fullcompass-support" /></p>
+<ul>
+  <li>the generated website is not optimized.</li>
+  <li>the <code>jekyll serve</code> command just won’t reload my browser on changes (But this may be just a problem I have, as Jekyll doesn’t officially support Windows).</li>
+  <li>I prefer to code a website my own way, use Jekyll only for my blog section and not have two separate project to achieve that.</li>
+</ul>
 
-<p>Prepros comes with Sass, Compass and Haml support already installed, no need to install the gem files BUT… somehow, using the full Compass support (which includes ALL of Compass features and not only the CSS3 module) will ignore your config.rb root file, and will generate compass default folders in your project folder. To avoid this, go to the overall settings and click on  “use custom ruby” specifying the path of ruby.exe in your computer. This will use your pre-installed gems and with this on, you can use compass plugins too!</p>
+<p>These things I didn’t like about Jekyll are now solved by BoxTent. The integration between BoxTent and Jekyll is a breeze as BoxTent uses a very similar folder naming convention and they get very well togheter. This very website <a href="https://github.com/vlrprbttst/valeriopierbattista.com-2016">was once run on Jekyll only</a> but I’ve recently switched to <a href="https://github.com/vlrprbttst/valeriopierbattista.com-2017">Boxtent <strong>and</strong> Jekyll</a> (for the blog section only) and it’s going great so far, I’m very happy about this fusion.</p>
 
-<p><img src="/images/blog/advancedsettings.png" alt="advancedsettings" /></p>
+<h2 id="is-it-hackable">Is it hackable?</h2>
 
-<p>Thumbs up for this great software!</p>
+<p>BoxTent is easily hackable and extensible to suit your needs if you know your way in a <code>gruntfile.js</code>. You can check out <a href="https://github.com/vlrprbttst/valeriopierbattista.com-2017">the repository of this very website</a> to see how I integrated the susy grid, compass, some php to grab my tweets, jekyll and a bunch of jquery plugins. Don’t forget BoxTent also has a extensive user guide at <a href="www.boxtent.top">www.boxtent.top</a>.</p>
+
+<h2 id="isnt-boxtent-born-obsolete"> Isn’t BoxTent born obsolete?</h2>
+
+<p>You read this blog post and you ask yourself why, you watch your calendar and see a big flashing <strong>2017</strong> written on it. The question arises: “isn’t this approach a bit old style?”. Actually this may be a slightly old fashioned way of dealing with a web development project, but it still makes sense for some situations:</p>
+
+<ul>
+  <li>not all projects are so technically complex to justify the adoption of a javascript framework like angular or react over a simple structure like HTML, CSS and JAVASCRIPT (with or without jquery). Think of a documentation website, a personal page or a static website for a small client.</li>
+  <li>you may be a beginner and you are teaching yourself grunt and frontend development</li>
+  <li>you need to set up a development environment quickly, but you still want to deliver performant and fully optimized code.</li>
+</ul>
  <p class="sharethis">Share this:</p>
 <div class="social-cont">
 
-  <div class="js-share-popup social-box facebook" data-href="https://facebook.com/sharer.php?u=http://valeriopierbattista.com/blog/the-free-alternative-to-codekit-prepros-compiles-sass-compass-and-haml/">
+  <div class="js-share-popup social-box facebook" data-href="https://facebook.com/sharer.php?u=http://valeriopierbattista.com/blog/a-frontend-workflow-for-static-websites/">
     <i class="fa social-ico fa-facebook"> </i>
   </div>
 
-  <div class="js-share-popup social-box twitter" data-href="https://twitter.com/intent/tweet?text=The Free Alternative To Codekit Prepros Compiles Sass Compass And Haml&url=http://valeriopierbattista.com/blog/the-free-alternative-to-codekit-prepros-compiles-sass-compass-and-haml/&via=vlrprbttst&related=vlrprbttst">
+  <div class="js-share-popup social-box twitter" data-href="https://twitter.com/intent/tweet?text=A Frontend Workflow For Static Websites&url=http://valeriopierbattista.com/blog/a-frontend-workflow-for-static-websites/&via=vlrprbttst&related=vlrprbttst">
     <i class="fa social-ico fa-twitter"> </i>
   </div>
 
-  <div class="js-share-popup social-box linkedin" data-href="http://www.linkedin.com/shareArticle?mini=true&url=http://valeriopierbattista.com/blog/the-free-alternative-to-codekit-prepros-compiles-sass-compass-and-haml/&title=The Free Alternative To Codekit Prepros Compiles Sass Compass And Haml&source=http://valeriopierbattista.com">
+  <div class="js-share-popup social-box linkedin" data-href="http://www.linkedin.com/shareArticle?mini=true&url=http://valeriopierbattista.com/blog/a-frontend-workflow-for-static-websites/&title=A Frontend Workflow For Static Websites&source=http://valeriopierbattista.com">
     <i class="fa social-ico fa-linkedin"> </i>
   </div>
-<div class="js-share-popup social-box gplus" data-href="https://plus.google.com/share?url=http://valeriopierbattista.com/blog/the-free-alternative-to-codekit-prepros-compiles-sass-compass-and-haml/">
+<div class="js-share-popup social-box gplus" data-href="https://plus.google.com/share?url=http://valeriopierbattista.com/blog/a-frontend-workflow-for-static-websites/">
  <i class="fa social-ico fa-google-plus"> </i>
 </div>
 </div>

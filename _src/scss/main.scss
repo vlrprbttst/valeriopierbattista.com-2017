@@ -599,10 +599,16 @@ $bar-bg: lighten($secondaryTextColor,25%);
       margin: rhythm(1) 0 rhythm(.5);
       display: inline-block;
       border-bottom: 5px solid rgba(0,0,0,.2);
+      text-decoration: none;
     }
   }
   h1 {
     margin-bottom: rhythm(.2);
+    a,
+    a:visited,
+    a:hover {
+        text-decoration: none;
+    }
   }
   .date,
   .sharethis {

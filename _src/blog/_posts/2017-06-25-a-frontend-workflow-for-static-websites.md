@@ -7,7 +7,7 @@ post-image: boxtent.jpg
 
 I've created and launched BoxTent around a year ago and after using it on many projects I now have a solid understanding of its potential, that's why I've decided to write a blog post about it only at present time.
 
-[BoxTent](http://boxtent.top) could be described as an highly automated workflow, designed to build simple static websites with performance in mind. Every time I started a new project I would always ended up setting a similar work flow and environment, one that took care of the SAMO&copy; stuff like sass support, javascript concatenation, assets optimization and so on. I've decided to optimize the time involved in setting up the work environment and the task management, that's how [BoxTent](http://boxtent.top) was born.
+[BoxTent](http://boxtent.top) could be described as an highly automated workflow, designed to build simple static websites with performance in mind. Every time I started a new project I would always end up setting a similar work flow and environment, one that took care of the SAMO&copy; stuff like sass support, javascript concatenation, assets optimization and so on. I've decided to optimize the time involved in setting up the work environment and the task management, that's how [BoxTent](http://boxtent.top) was born.
 
 <!--more-->
 
@@ -30,7 +30,7 @@ That's exactly BoxTent's _forte_, as you get out of the box support for:
 - you don't have to care about CSS vendor prefixes, you can choose the desired browser support and autoprefixer will do the rest...
 - ...And much, much more!
 
-You work is conveniently split into an `_src` folder with your source files, a `_dev` folder with your processed-but-not-production-ready files and finally, typing the `grunt build` command, the whole site gets optimized in the `_site` folder, ready for production.
+You work is conveniently split into a `_src` folder with your source files, a `_dev` folder with your processed-and-easy-to-debug-but-not-production-ready files and finally, typing the `grunt build` command, the whole site gets optimized in the `_site` folder, ready to be uploaded in production.
 
 ## BoxTent + Jekyll
 
@@ -44,12 +44,14 @@ These things I didn't like about Jekyll are now solved by BoxTent. The integrati
 
 ## Is it hackable?
 
-BoxTent is easily hackable and extensible to suit your needs if you know your way in a `gruntfile.js`. You can check out [the repository of this very website](https://github.com/vlrprbttst/valeriopierbattista.com-2017) to see how I integrated the susy grid, compass, some php to grab my tweets, jekyll and a bunch of jquery plugins. Don't forget BoxTent also has a extensive user guide at [www.boxtent.top](www.boxtent.top).
+BoxTent is easily hackable and extensible to suit your needs if you know your way in a `gruntfile.js`. You can check out [the repository of my website](https://github.com/vlrprbttst/valeriopierbattista.com-2017) to see how I integrated the susy grid, compass, some php to grab my tweets, jekyll and a bunch of jquery plugins. Don't forget BoxTent also has a extensive user guide at [www.boxtent.top](www.boxtent.top) where every aspect of BoxTent is explained.
 
 ## Isn't BoxTent born obsolete?
 
-You read this blog post and you ask yourself why, you watch your calendar and see a big flashing **2017** written on it. The question arises: "isn't this approach a bit old style?". Actually this may be a slightly old fashioned way of dealing with a web development project, but it still makes sense for some situations:
+You read this blog post and you ask yourself why, you watch your calendar and see a big flashing **2017** written on it. The question arises: "isn't this approach a bit old style?". Actually this might be a slightly old fashioned way of dealing with a web development project, but it still makes sense for certain situations:
 
 - not all projects are so technically complex to justify the adoption of a javascript framework like angular or react over a simple structure like HTML, CSS and JAVASCRIPT (with or without jquery). Think of a documentation website, a personal page or a static website for a small client.
 - you may be a beginner and you are teaching yourself grunt and frontend development
-- you need to set up a development environment quickly, but you still want to deliver performant and fully optimized code.
+- you need to set up a development environment quickly, but you still want to deliver performant and fully optimized code even if it's for a small project.
+
+I've used BoxTent extensively over the last year, and I can now say it actually delivers what I hoped it would.

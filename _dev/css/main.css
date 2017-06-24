@@ -784,7 +784,9 @@ nav ul {
   -ms-flex-pack: justify;
       justify-content: space-between;
   -ms-flex-align: stretch;
-      align-items: stretch; }
+      align-items: stretch;
+  -ms-flex-pack: center;
+      justify-content: center; }
   #twitter-feed:after {
     content: "";
     display: table;
@@ -793,19 +795,19 @@ nav ul {
     #twitter-feed {
       display: block; } }
   #twitter-feed .twitter-article {
-    width: 31%;
-    -ms-flex: 0 0 31%;
-        flex: 0 0 31%;
-    background: #FFFFFF;
-    padding: 0 1.5em;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.155); }
-    @media all and (max-width: 80em) {
+    width: 32%;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto; }
+    #twitter-feed .twitter-article:first-child {
+      margin-right: auto; }
+    #twitter-feed .twitter-article:last-child {
+      margin-left: auto; }
+    @media all and (max-width: 85em) {
       #twitter-feed .twitter-article {
         margin-bottom: 1.5em;
         width: 100%;
         -ms-flex: none;
-            flex: none;
-        padding: 0.75em 1.5em; } }
+            flex: none; } }
   #twitter-feed img {
     display: block;
     margin: 0 auto;
@@ -827,12 +829,24 @@ nav ul {
   clear: both; }
 #instafeed a,
 #instafeed a:active,
-#instafeed a:visited {
-  color: #727272 !important; }
-  #instafeed a:hover,
-  #instafeed a:active:hover,
-  #instafeed a:visited:hover {
-    text-decoration: none; }
+#instafeed a:visited,
+#instafeed a:hover {
+  text-decoration: none;
+  color: #727272 !important;
+  display: block;
+  margin-bottom: 1.5em; }
+
+.insta-text-wrapper {
+  padding: 0.75em 0 0 0; }
+
+.insta-caption {
+  font-size: 1em;
+  line-height: 1.8em;
+  font-weight: bold; }
+
+.insta-geolocation {
+  font-size: 0.75em;
+  line-height: 1em; }
 
 .insta-wrapper {
   width: 33.33333%;
@@ -846,17 +860,6 @@ nav ul {
       padding: 0; } }
   .insta-wrapper img {
     border-radius: 5px; }
-  .insta-wrapper p {
-    margin: 0;
-    padding: 1.5em 0;
-    width: 100%;
-    font-size: 0.75em;
-    line-height: 2em; }
-    .insta-wrapper p span {
-      font-weight: bold;
-      font-size: 1.375em;
-      line-height: 1.63636em;
-      display: block; }
 
 img {
   width: 100%;
@@ -866,15 +869,11 @@ img {
     background: #A62038;
     padding: 10px; }
 
-.now-playing {
-  background: #FFFFFF;
-  padding: 0.375em 1.5em;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.155); }
-  .now-playing span {
-    color: #727272;
-    font-size: 0.75em;
-    line-height: 3em;
-    display: block; }
+.now-playing span {
+  color: #727272;
+  font-size: 0.75em;
+  line-height: 3em;
+  display: block; }
 
 /*
 * easily control equalizer width, height and * color with the following variables

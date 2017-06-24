@@ -234,21 +234,25 @@ blockquote {
     flex-flow:row wrap;
     justify-content: space-between;
     align-items: stretch;
+    justify-content: center;
     @include respond-to(80) {
         display: block;
     }
 
     .twitter-article {
-        width: 31%;
-        flex: 0 0 31%;
-        background: $textPrimaryColor;
-        padding: 0 rhythm(1);
-        box-shadow: 0 0 5px rgba(0,0,0,.155);
-        @include respond-to(80) {
+        width: 32%;
+        flex: 0 0 auto;
+
+        &:first-child {
+            margin-right: auto;
+        }
+        &:last-child {
+            margin-left: auto;
+        }
+        @include respond-to(85) {
             margin-bottom: rhythm(1);
             width: 100%;
             flex: none;
-            padding: rhythm(.5) rhythm(1);
         }
     }
 
@@ -276,16 +280,25 @@ blockquote {
 
 #instafeed {
     @include clearfix;
-
     a,
     a:active,
-    a:visited {
+    a:visited,
+    a:hover {
+        text-decoration: none;
         color: $secondaryTextColor !important;
-
-        &:hover {
-            text-decoration: none;
-        }
+        display: block;
+        margin-bottom: rhythm(1);
     }
+}
+.insta-text-wrapper {
+    padding: rhythm(.5) 0 0 0;
+}
+.insta-caption {
+    @include adjust-font-size-to(16px,1.2);
+    font-weight: bold;
+}
+.insta-geolocation {
+    @include adjust-font-size-to(12px,.5);
 }
 
 .insta-wrapper {
@@ -302,19 +315,6 @@ blockquote {
     img {
         border-radius: 5px;
     }
-
-    p {
-        margin: 0;
-        padding: rhythm(1) 0;
-        width: 100%;
-        @include adjust-font-size-to(12px);
-
-        span {
-            font-weight: bold;
-            @include adjust-font-size-to(22px);
-            display: block;
-        }
-    }
 }
 
 img {
@@ -328,16 +328,10 @@ img {
     }
 }
 
-.now-playing {
-    background: $textPrimaryColor;
-    padding: rhythm(.25) rhythm(1);
-    box-shadow: 0 0 5px rgba(0,0,0,.155);
-
-    span {
-        color: $secondaryTextColor;
-        @include adjust-font-size-to(12px,1.5);
-        display: block;
-    }
+.now-playing span {
+    color: $secondaryTextColor;
+    @include adjust-font-size-to(12px,1.5);
+    display: block;
 }
 
 /*

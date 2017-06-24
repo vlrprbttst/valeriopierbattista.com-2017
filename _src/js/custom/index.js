@@ -665,9 +665,18 @@ var userFeed = new Instafeed({
 	accessToken : '33551734.1677ed0.55edac8ccae947ce9b98824757fef93c',
 	limit : 3,
 	resolution : 'standard_resolution',
-	template : '<a href="{{link}}" target="_blank"><div class="insta-wrapper"><img src="{{image}}"><p><span>{{caption}}</span>{{location}}</p></div></a>'
+	template : '<a href="{{link}}" target="_blank"><div class="insta-wrapper"><img src="{{image}}"><div class="insta-text-wrapper"><div class="insta-caption">{{caption}}</div><div class="insta-geolocation">{{location}}</div></div></div></a>'
 });
 userFeed.run();
+function checklocation(){
+    var emptyLocation = $('.insta-geolocation:empty');
+    var presentLocation = $(".insta-geolocation:not(:empty)");
+    $(emptyLocation).parent().remove();
+    $(presentLocation).prepend("<i class='fa fa-map-marker'></i> ")
+}
+$(document).ready(function(){
+    setTimeout(checklocation, 1000);    
+})
 
 // spotify
 function get_spotify() {

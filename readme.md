@@ -20,7 +20,7 @@ Type these in the terminal anywhere:
 
 `gem install susy`
 
-`gem install jekyll` (jekyll 3.4.3)
+`gem install jekyll` (jekyll 3.5.0)
 
 `gem install jekyll-paginate`  
 

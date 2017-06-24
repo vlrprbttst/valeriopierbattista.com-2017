@@ -342,7 +342,7 @@ a:hover {
 blockquote {
     background: $pageBackground;
     margin: 0;
-    padding: rhythm(2);
+    padding: rhythm(.5) rhythm(1);
     border-left: 5px solid darken($pageBackground,20%);
     @include adjust-font-size-to(16px,1.2);
     font-style: italic;

@@ -10,7 +10,7 @@ layout: default
 				<span class="date"><i class="fa fa-clock-o"></i> {{ post.date | date: '%B %d, %Y'}}</span>
 
 			{{ post.excerpt }}
-			<a class="more-link" href="{{ post.url }}">continue reading <i class="fa fa-chevron-right"></i></a>
+			<a class="more-link" href="{{ post.url }}">continue reading<i class="fa fa-chevron-right"></i></a>
 		</div>
 		{% endfor %}
 
@@ -18,7 +18,7 @@ layout: default
 			<ul>
 				{% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
 				<li>
-					<a href="/blog/">Prev</a> 
+					<a href="/blog/">Prev</a>
 				</li>
 				{% else %}
 				<li>

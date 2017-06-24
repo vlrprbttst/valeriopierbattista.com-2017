@@ -1,0 +1,187 @@
+.sidebar {
+  width:$sidebarW;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: $darkPrimaryColor;
+  color: $textPrimaryColor;
+  z-index: 100;
+  @include respond-to(80) {
+      width: $sidebarW2;
+  }
+  @include respond-to(64) {
+    @include span(12 of 12);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    height: auto;
+    #bars {
+      display: block;
+      padding: 10px 20px;
+      right: 0;
+      top: 20px;
+      position: absolute;
+      cursor:pointer;
+      @include adjust-font-size-to(24px);
+    }
+  }
+}
+
+#bars {
+  display: none;
+}
+
+.sub-container-sidebar {
+    @include span(2 of 3);
+    margin: 0 auto;
+    float: none;
+    padding: rhythm(2) 0 rhythm(1);
+    @include respond-to(64) {
+         @include span(12 of 12);
+        float: none;
+        padding: rhythm(1) span(1);
+    }
+}
+
+.name {
+  @include adjust-font-size-to(18px,1.2);
+  font-weight: 700;
+}
+.job {
+  color: $lightPrimaryColor;
+}
+
+nav {
+  @include clearfix;
+  @include respond-to(64) {
+    display: none;
+    &.mobile-menu-visible {
+      display: block;
+    }
+  }
+  ul {
+    @include reset;
+    @include clearfix;
+    overflow: auto;
+    @include respond-to(64) {
+      height: auto !important;
+    }
+    li {
+      @include reset;
+      list-style: none;
+      border-bottom: 1px solid rgba(0,0,0,.1);
+      border-top: 1px solid rgba(255,255,255,.1);
+      @include clearfix;
+      &:hover {
+        background: $primaryColor;
+        color: $darkPrimaryColor;
+        border-bottom: 1px solid $primaryColor;
+        border-top: 1px solid $primaryColor;
+      }
+      &:first-child {
+        border-top: 0;
+      }
+      &:last-child {
+        box-shadow: 0 1px 0 rgba(255,255,255,.1);
+      }
+      a,
+      a:visited,
+      a:active {
+        width: span(2 of 3);
+        padding: rhythm(.5) 0;
+        margin: 0 auto;
+        @include adjust-font-size-to(18px,1.2);
+        display: block;
+        text-decoration: none;
+        color: $textPrimaryColor;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+        @include respond-to(64) {
+          @include span(3 of 3);
+          padding: rhythm(.5) span(1);
+        }
+
+        &:hover {
+          color: $textPrimaryColor;
+          text-decoration: none;
+        }
+        i {
+          padding: 0 10px 0 0;
+        }
+    }//a
+  }//li
+ }//ul
+}//nav
+
+// headroom
+
+.headroom {
+  @include respond-to(64) {
+    transition: transform 500ms cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    &.headroom--unpinned {
+      transform: translateY(-100%);
+      transition: transform 250ms cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    }
+    &.headroom--pinned {
+      transform: translateY(0);
+    }
+  }
+}
+//headroom
+
+.footer {
+    z-index: 100;
+    width:$sidebarW;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: $darkPrimaryColor;
+    color: $textPrimaryColor;
+    @include adjust-font-size-to(13px,1);
+    text-align: left;
+
+    .sub-container-sidebar {
+        @include span(3 of 3);
+        padding: 0 span(1) span(1);
+    }
+
+    a,
+    a:hover,
+    a:visited {
+        color: $textPrimaryColor;
+        text-decoration: underline;
+    }
+    @include respond-to(80) {
+        width: $sidebarW2;
+    }
+    @include respond-to(64) {
+        @include span(12 of 12);
+        padding: rhythm(1) 0;
+        position: static;
+    }
+
+}
+
+.site-info {
+    @include respond-to(64) {
+         @include span(12 of 12);
+        text-align: center;
+    }
+}
+
+.footer-sep {
+    border-top: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-left: 0;
+    border-right: 0;
+    width: 100%;
+    margin: rhythm(1) 0;
+    display: inline-block;
+    @include respond-to(64) {
+        margin: rhythm(1) 0 0;
+    }
+}

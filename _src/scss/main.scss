@@ -25,246 +25,12 @@ body {
     background: $pageBackground;
     color:$primaryTextColor;
     @include container;
+    padding-left:$sidebarW;
+    @include respond-to(80) {
+        padding-left:$sidebarW2;
+    }
     @include respond-to(64) {
         padding: 101px 0 0;
-    }
-}
-
-.sidebar {
-  @include span(3 of 12);
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: $darkPrimaryColor;
-  color: $textPrimaryColor;
-  z-index: 100;
-  #bars {
-    display: none;
-  }
-  @include respond-to(64) {
-    @include span(12 of 12);
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    height: auto;
-    #bars {
-      display: block;
-      padding: 10px 20px;
-      right: 0;
-      top: 20px;
-      position: absolute;
-      cursor:pointer;
-      @include adjust-font-size-to(24px);
-    }
-  }
-}
-.name {
-  @include adjust-font-size-to(18px,1.2);
-  font-weight: 700;
-}
-.job {
-  color: $lightPrimaryColor;
-}
-nav {
-  @include clearfix;
-  @include respond-to(64) {
-    display: none;
-    &.mobile-menu-visible {
-      display: block;
-    }
-  }
-  ul {
-    @include reset;
-    @include clearfix;
-    overflow: auto;
-    @include respond-to(64) {
-      height: auto !important;
-    }
-    li {
-      @include reset;
-      list-style: none;
-      border-bottom: 1px solid rgba(0,0,0,.1);
-      border-top: 1px solid rgba(255,255,255,.1);
-      @include clearfix;
-      &:hover {
-        background: $primaryColor;
-        color: $darkPrimaryColor;
-        border-bottom: 1px solid $primaryColor;
-        border-top: 1px solid $primaryColor;
-      }
-      &:first-child {
-        border-top: 0;
-      }
-      &:last-child {
-        box-shadow: 0 1px 0 rgba(255,255,255,.1);
-      }
-      a,
-      a:visited,
-      a:active {
-        @include span(2 of 3);
-        padding: rhythm(.5) 0;
-        float: none;
-        margin: 0 auto;
-        @include adjust-font-size-to(18px,1.2);
-        display: block;
-        text-decoration: none;
-        color: $textPrimaryColor;
-        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        @include respond-to(64) {
-          @include span(3 of 3);
-          padding: rhythm(.5) span(1);
-        }
-        &:hover {
-          color: $textPrimaryColor;
-          text-decoration: none;
-        }
-        i {
-          padding: 0 10px 0 0;
-        }
-      }
-    }
-  }
-}
-//nav
-.menu-placeholder {
-  @include respond-to-min(64) {
-    height: auto!important;
-  }
-}
-// headroom
-.headroom {
-  @include respond-to(64) {
-    transition: transform 500ms cubic-bezier(0.465, 0.183, 0.153, 0.946);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    &.headroom--unpinned {
-      transform: translateY(-100%);
-      transition: transform 250ms cubic-bezier(0.465, 0.183, 0.153, 0.946);
-    }
-    &.headroom--pinned {
-      transform: translateY(0);
-    }
-  }
-  //mediaquery mobile
-}
-//headroom
-
-.profile-pic {
-    max-width: 160px;
-    float: left;
-    display: inline-block;
-    border: 0;
-    margin: 0 rhythm(1) rhythm(1) 0;
-    cursor: pointer;
-    border-radius: 50%;
-    @include respond-to(21.875) {
-        display: none;
-    }
-}
-
-.personal-description-cont {
-    @include clearfix;
-
-}
-
-.sub-container-sidebar {
-    @include span(2 of 3);
-    margin: 0 auto;
-    float: none;
-    padding: rhythm(2) 0 rhythm(1);
-    @include respond-to(64) {
-         @include span(12 of 12);
-        float: none;
-        padding: rhythm(1) span(1);
-    }
-}
-
-.page-container {
-    @include span(9 of 12);
-    float: right;
-    @include respond-to(64) {
-         @include span(12 of 12);
-        padding: rhythm(1) 0;
-    }
-    @include respond-to(30) {
-        padding: 0;
-    }
-}
-
-.sub-container {
-    @include span(7 of 9);
-    float: none;
-    padding: rhythm(1) 0;
-    margin: 0 auto;
-    @include respond-to(30) {
-         @include span(9 of 9);
-        margin: 0 auto;
-        padding: rhythm(0) span(.5);
-        float: none;
-    }
-
-    &.work {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: stretch;
-        @include respond-to(90) {
-            flex-flow: column;
-            padding: rhythm(1) span(.6);
-        }
-    }
-
-    .work-item {
-        flex: 0 1 auto;
-        // width instead of flex-basis for ie10-11
-        //https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
-        width: 48%;
-        background: $textPrimaryColor;
-        padding: rhythm(1);
-        box-shadow: 0 0 5px rgba(0,0,0,.155);
-        margin-bottom: rhythm(1);
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-
-        .work-item {
-            &-body-container,
-            &-footer,
-            &-image-container {
-                //fix for ie10-11
-                //https://github.com/philipwalton/flexbugs#6-the-default-flex-value-has-changed
-                //always set shrink to 0
-                height: auto;
-                width: 100%;
-                flex-shrink: 0;
-            }
-        }
-
-        .work-item-footer {
-            margin-top: auto;
-            border-top:1px solid whitesmoke;
-        }
-
-        .work-item-footer p:last-child {
-            margin-bottom: 0;
-        }
-
-        img {
-            margin: 0 0 rhythm(1);
-        }
-
-        p span {
-            background: #eee;
-            color: $primaryTextColor;
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        }
-        @include respond-to(90) {
-            flex: 0 1 auto;
-            width: 100%;
-            margin: 0 0 rhythm(1);
-        }
     }
 }
 
@@ -348,56 +114,119 @@ blockquote {
     font-style: italic;
 }
 
-@import "partials/_social-icons.scss";
+@import "partials/_sidebar.scss";
 
-.footer {
-    z-index: 100;
-    @include span(3 of 12);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background: $darkPrimaryColor;
-    color: $textPrimaryColor;
-    @include adjust-font-size-to(13px,1);
-    text-align: left;
-
-    .sub-container-sidebar {
-        @include span(3 of 3);
-        padding: 0 span(1) span(1);
-    }
-    @include respond-to(64) {
-        @include span(12 of 12);
-        padding: rhythm(1) 0;
-        position: static;
-    }
-
-    a,
-    a:hover,
-    a:visited {
-        color: $textPrimaryColor;
-        text-decoration: underline;
-    }
-}
-
-.site-info {
-    @include respond-to(64) {
-         @include span(12 of 12);
-        text-align: center;
-    }
-}
-
-.footer-sep {
-    border-top: 1px solid rgba(0,0,0,.1);
-    border-bottom: 1px solid rgba(255,255,255,.1);
-    border-left: 0;
-    border-right: 0;
-    width: 100%;
-    margin: rhythm(1) 0;
+.profile-pic {
+    max-width: 160px;
+    float: left;
     display: inline-block;
-    @include respond-to(64) {
-        margin: rhythm(1) 0 0;
+    border: 0;
+    margin: 0 rhythm(1) rhythm(1) 0;
+    cursor: pointer;
+    border-radius: 50%;
+    @include respond-to(21.875) {
+        display: none;
     }
 }
+
+.personal-description-cont {
+    @include clearfix;
+}
+
+.page-container {
+    max-width: span(8 of 12);
+    @include respond-to(100) {
+        width: span(12 of 12);
+        max-width: span(12 of 12);
+    }
+}
+
+.page-container--large {
+    max-width: span(12 of 12);
+    width: span(12 of 12);
+}
+
+.sub-container {
+    padding: rhythm(2) 0 rhythm(1) rhythm(4);
+    @include respond-to(100) {
+        padding: rhythm(2) rhythm(4);
+    }
+    @include respond-to(80) {
+        padding: rhythm(2);
+    }
+    @include respond-to(30) {
+        width: span(9 of 9);
+        padding: rhythm(0) span(.5);
+    }
+}
+
+.sub-container.work {
+    padding-right: span(2.5);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    @include respond-to(100) {
+        padding-right:  rhythm(4);
+    }
+    @include respond-to(90) {
+        flex-flow: column;
+        padding: rhythm(1) span(.6);
+    }
+}
+
+.work-item {
+    flex: 0 1 auto;
+    // width instead of flex-basis for ie10-11
+    //https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
+    width: 48%;
+    background: $textPrimaryColor;
+    padding: rhythm(1);
+    box-shadow: 0 0 5px rgba(0,0,0,.155);
+    margin-bottom: rhythm(1);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .work-item {
+        &-body-container,
+        &-footer,
+        &-image-container {
+            //fix for ie10-11
+            //https://github.com/philipwalton/flexbugs#6-the-default-flex-value-has-changed
+            //always set shrink to 0
+            height: auto;
+            width: 100%;
+            flex-shrink: 0;
+        }
+    }
+
+    .work-item-footer {
+        margin-top: auto;
+        border-top:1px solid whitesmoke;
+    }
+
+    .work-item-footer p:last-child {
+        margin-bottom: 0;
+    }
+
+    img {
+        margin: 0 0 rhythm(1);
+    }
+
+    p span {
+        background: #eee;
+        color: $primaryTextColor;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    }
+    @include respond-to(90) {
+        flex: 0 1 auto;
+        width: 100%;
+        margin: 0 0 rhythm(1);
+    }
+}
+
+@import "partials/_social-icons.scss";
 
 #twitter-feed {
     @include clearfix;
@@ -510,6 +339,7 @@ img {
         display: block;
     }
 }
+
 /*
 * easily control equalizer width, height and * color with the following variables
 *
@@ -563,212 +393,6 @@ $bar-bg: lighten($secondaryTextColor,25%);
         }
     }
 }
-
-
-.blog {
-    img {
-        border:1px solid lightgrey;
-        padding:rhythm(.5);
-
-        &.cover {
-            border:0;
-            padding: 0;
-        }
-    }
-  .entry {
-    background: $textPrimaryColor;
-    padding: rhythm(1) rhythm(2);
-    box-shadow: 0 0 5px rgba(0,0,0,.155);
-    margin: 0 0 span(.5);
-    @include respond-to(64) {
-      padding: rhythm(1);
-    }
-    @include respond-to(30) {
-      margin-top: span(.5);
-      padding: rhythm(.5);
-    }
-  }
-  a,
-  a:visited {
-    &.more-link {
-      background: $primaryColor;
-      color: $textPrimaryColor;
-      border-radius: 2px;
-      text-transform: uppercase;
-      padding: rhythm(.5);
-      margin: rhythm(1) 0 rhythm(.5);
-      display: inline-block;
-      border-bottom: 5px solid rgba(0,0,0,.2);
-      text-decoration: none;
-    }
-  }
-  h1 {
-    margin-bottom: rhythm(.2);
-    a,
-    a:visited,
-    a:hover {
-        text-decoration: none;
-    }
-  }
-  .date,
-  .sharethis {
-    color: $dividerColor;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  }
-  $color-set: ( facebook:#3B5998, twitter: #56A3D9, linkedin: #007BB6, gplus:#D14836 );
-  $socialsize: 2.3rem;
-  $socialmargin: 0.3rem;
-  $socialcount: 4;
-  @function makelongshadow($the-color) {
-    $val: 0 0 $the-color;
-    @for $i from 1 through 50 {
-      $val: #{$val}, #{$i}px #{$i + 1}px #{$the-color};
-    }
-    @return $val;
-  }
-  @mixin longshadow($the-color) {
-    text-shadow: makelongshadow($the-color);
-  }
-  @each $color-class,
-  $the-color in $color-set {
-    .social-cont div.social-box.#{$color-class} {
-      background: $the-color;
-      i.social-ico {
-        @include longshadow(darken($the-color,10%));
-      }
-    }
-    //social-cont span
-  }
-  //end of loop
-  .social-cont {
-    font-size: $socialsize;
-    text-align: left;
-    width: ($socialsize * 1.5) * ($socialcount) + ($socialmargin * $socialcount * 2) - ($socialmargin * 2);
-    overflow: auto;
-    margin-bottom: rhythm(.5);
-    .social-box {
-      float: left;
-      overflow: hidden;
-      border-radius: $socialsize/8;
-      margin: 0 $socialmargin;
-      width: $socialsize*1.5;
-      height: $socialsize*1.5;
-      padding: 0;
-      display: block;
-      text-align: center;
-      cursor: pointer;
-      &:first-child {
-        margin-left: 0;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-      i {
-        line-height: $socialsize*1.5;
-      }
-    }
-    i.social-ico {
-      color: $textPrimaryColor;
-    }
-  }
-  .pagination {
-    text-align: center;
-    ul,
-    li {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    ul {
-      display: inline-block;
-      overflow: auto;
-      margin-bottom: rhythm(1);
-      @include adjust-font-size-to(20px,1);
-    }
-    li {
-      float: left;
-      margin: 0 10px;
-      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-      &:last-child {
-        margin-right: 0;
-      }
-      &:first-child {
-        margin-left: 0;
-      }
-      .disabled {
-        color: $secondaryTextColor;
-      }
-      .active {
-        background: $darkPrimaryColor;
-        color: $textPrimaryColor;
-        padding: 5px 10px;
-        border-radius: 5px;
-      }
-    }
-  }
-  .back-btn {
-    margin-bottom: rhythm(1);
-    display: block;
-    float: left;
-    clear: both;
-    width: 100%;
-  }
-}
-// blog
-
-
-
-#info_cookie {
-  background: #222;
-  color:$textPrimaryColor;
-  padding:10px 20px;
-  font-size:12px;
-  line-height:16px;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  text-align: center;
-  position:fixed;
-  z-index:999;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-
-
-  @media all and (min-width:1025px){
-    position:static;
-    float: right;
-    width: 75%;
-  }
-
-}
-.cookie-btn {
-  display: inline-block;
-  padding:5px 20px;
-  font-size:14px;
-  background:white;
-  background-image:linear-gradient(to top, #eee,white);
-  color:black;
-  margin:10px 0 0 0;
-  border-radius:3px;
-  border-bottom:2px solid lightgrey;
-  text-transform: capitalize;
-  cursor:pointer;
-
-  &:nth-child(3) {
-    margin:0 0 0 10px;
-  }
-
-  a {
-    @include unstyled-link;
-    &:hover {
-    @include unstyled-link;
-    }
-  }
-}
-.cookie-hidden {
-  display: none!important;
-}
-.cookie-visible {
-  display: block!important;
-}
-
+@import "partials/_blog.scss";
 @import "partials/_prism.scss";
+@import "partials/_cookie.scss";

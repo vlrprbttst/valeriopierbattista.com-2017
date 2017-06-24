@@ -1,3 +1,5 @@
+//colors
+
 $darkPrimaryColor: #D32F2F;
 $primaryColor: #F44336;
 $lightPrimaryColor: #FFCDD2;
@@ -7,8 +9,16 @@ $primaryTextColor: #212121;
 $secondaryTextColor: #727272;
 $dividerColor: #B6B6B6;
 $pageBackground: #f9f9f9;
+
+// typography base for vertical rhythm
+
 $base-font-size: 16px;
 $base-line-height: 24px;
 @include establish-baseline;
 @include border-box-sizing;
 $round-to-nearest-half-line: true;
+
+// other
+
+$sidebarW: 400px;
+$sidebarW2:300px;

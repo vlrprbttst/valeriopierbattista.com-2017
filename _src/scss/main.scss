@@ -275,11 +275,31 @@ blockquote {
             padding: 0;
         }
     }
-
 }
 
 #instafeed {
-    @include clearfix;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    @include respond-to(48) {
+        flex-flow: column nowrap;
+    }
+}
+
+.insta-wrapper {
+    width: 32%;
+    &:first-child {
+        margin-right: auto;
+    }
+    &:last-child {
+        margin-left: auto;
+    }
+
+    @include respond-to(48) {
+        width: 100%;
+    }
+
     a,
     a:active,
     a:visited,
@@ -289,7 +309,12 @@ blockquote {
         display: block;
         margin-bottom: rhythm(1);
     }
+
+    img {
+        border-radius: 5px;
+    }
 }
+
 .insta-text-wrapper {
     padding: rhythm(.5) 0 0 0;
 }
@@ -301,21 +326,7 @@ blockquote {
     @include adjust-font-size-to(12px,.5);
 }
 
-.insta-wrapper {
-    width: 33.33333%;
-    float: left;
-    position: relative;
-    padding: 0 10px;
-    @include respond-to(48) {
-        width: 100%;
-        float: none;
-        padding: 0;
-    }
 
-    img {
-        border-radius: 5px;
-    }
-}
 
 img {
     width: 100%;

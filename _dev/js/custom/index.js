@@ -697,3 +697,37 @@ get_spotify();
 // giflink
 var element = document.querySelector( '.profile-pic');
 GifLinks( element, { preload: true } );
+
+// slick Slider
+
+$('.clients-slider').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  arrows: true,
+  centerMode: true,
+  dots:false,
+  lazyLoad: 'ondemand',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows:false
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows:false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});

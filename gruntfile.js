@@ -95,6 +95,9 @@ module.exports = function(grunt) {
 
         imagemin: {
             dynamic: {
+                options: {
+                    optimizationLevel: 7,
+                },
                 files: [{
                     expand: true, // Enable dynamic expansion
                     cwd: '<%= source %>/<%= images %>/', // source images (not compressed)
@@ -275,7 +278,7 @@ module.exports = function(grunt) {
                     dot: true,
                     cwd: 'bower_components',
                     dest: '<%= dev %>/<%= js %>/libs/',
-                    src: ['jquery/dist/jquery.js','instaFeed/source/core.js']
+                    src: ['jquery/dist/jquery.js']
                 }]
             },
             js: {

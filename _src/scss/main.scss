@@ -1,9 +1,13 @@
+@charset "UTF-8";
 // base
 @import "compass";
 @import "susy";
 @import "partials/_reset.scss";
 @import "partials/_mixin.scss";
 @import "partials/_variables.scss";
+
+@import "partials/_slick.scss";
+@import "partials/_slick-theme.scss";
 
 html {
     box-sizing: border-box;
@@ -131,6 +135,7 @@ blockquote {
 
 .personal-description-cont {
     @include clearfix;
+    margin-bottom: rhythm(1);
 }
 
 .page-container {
@@ -180,7 +185,7 @@ blockquote {
     // width instead of flex-basis for ie10-11
     //https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
     width: 48%;
-    background: $textPrimaryColor;
+    background: $TextOnDarkBgColor;
     padding: rhythm(1);
     box-shadow: 0 0 5px rgba(0,0,0,.155);
     margin-bottom: rhythm(1);
@@ -395,6 +400,77 @@ $bar-bg: lighten($secondaryTextColor,25%);
         &.right {
             right: 0;
             animation: equalizer 0.4s infinite ease-in 0.2s;
+        }
+    }
+}
+
+.clients-slider {
+    margin-bottom: rhythm(1);
+    padding:0 rhythm(1);
+    @include respond-to(37.5) {
+        padding: 0;
+    }
+    &:before {
+            position:absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: calc(100%);
+            width: 20px;
+            background: linear-gradient(to right, $pageBackground 50%, transparent);
+            content:"";
+            z-index:100;
+            @include respond-to(37.5) {
+                left: 0;
+            }
+        }
+        &:after {
+                position:absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                height: calc(100%);
+                width: 20px;
+                background: linear-gradient(to left, $pageBackground 50%, transparent);
+                content:"";
+                z-index:100;
+                @include respond-to(37.5) {
+                    right: 0;
+                }
+            }
+    .slick-slider__item {
+        height: 120px;
+        padding:0 20px;
+        background: #fff;
+        margin: 10px;
+        outline:0!important;
+        cursor:move;
+        box-shadow: 0 0 5px rgba(0,0,0,.155);
+    }
+    .logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 280px;
+        @include vertical-align;
+        &--enjoy {
+            background: #C60E37;
+            padding: 10px 10px 5px;
+            max-width: 120px;
+        }
+        &--agi {
+            max-width: 65px;
+        }
+        &--eni {
+            max-width: 65px;
+        }
+        &--romaradio {
+            max-width: 100px;
+        }
+        &--tedx {
+            max-width: 100px;
+        }
+        &--hasbro {
+            max-width: 90px;
         }
     }
 }

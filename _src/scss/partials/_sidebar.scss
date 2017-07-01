@@ -5,7 +5,7 @@
   left: 0;
   height: 100%;
   background: $darkPrimaryColor;
-  color: $textPrimaryColor;
+  color: $TextOnDarkBgColor;
   z-index: 100;
   @include respond-to(80) {
       width: $sidebarW2;
@@ -92,7 +92,7 @@ nav {
         @include adjust-font-size-to(18px,1.2);
         display: block;
         text-decoration: none;
-        color: $textPrimaryColor;
+        color: $TextOnDarkBgColor;
         font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
         @include respond-to(64) {
@@ -101,7 +101,7 @@ nav {
         }
 
         &:hover {
-          color: $textPrimaryColor;
+          color: $TextOnDarkBgColor;
           text-decoration: none;
         }
         i {
@@ -140,7 +140,7 @@ nav {
     bottom: 0;
     left: 0;
     background: $darkPrimaryColor;
-    color: $textPrimaryColor;
+    color: $TextOnDarkBgColor;
     @include adjust-font-size-to(13px,1);
     text-align: left;
 
@@ -152,7 +152,7 @@ nav {
     a,
     a:hover,
     a:visited {
-        color: $textPrimaryColor;
+        color: $TextOnDarkBgColor;
         text-decoration: underline;
     }
     @include respond-to(80) {

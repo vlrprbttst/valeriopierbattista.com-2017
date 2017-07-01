@@ -1,17 +1,24 @@
 //colors
 
+//side bar color
 $darkPrimaryColor: #D32F2F;
-$primaryColor: #F44336;
-$lightPrimaryColor: #FFCDD2;
-$textPrimaryColor: #FFFFFF;
-$accentColor: #536DFE;
+$lightPrimaryColor: lighten($darkPrimaryColor,28%);
+//text color on dark bg
+$TextOnDarkBgColor: #FFFFFF;
+
+//light background
+$pageBackground: #f9f9f9;
+//text accent color on light background
+$primaryColor: lighten($darkPrimaryColor,1%);
+//text on light background
 $primaryTextColor: #212121;
 $secondaryTextColor: #727272;
+
+//extra colors
 $dividerColor: #B6B6B6;
-$pageBackground: #f9f9f9;
+
 
 // typography base for vertical rhythm
-
 $base-font-size: 16px;
 $base-line-height: 24px;
 @include establish-baseline;

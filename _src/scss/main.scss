@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 // base
 @import "compass";
 @import "susy";
@@ -26,8 +27,8 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background: $pageBackground;
-    color:$primaryTextColor;
+    background: $page-bg;
+    color:$text-color--on-light-bg;
     @include container;
     padding-left:$sidebarW;
     @include respond-to(80) {
@@ -40,7 +41,7 @@ body {
 
 h1 {
     @include adjust-font-size-to(36px,2);
-    color: $primaryColor;
+    color: $heading-color--on-light-bg;
     font-weight: 700;
     margin: 0 0 rhythm(.5);
 
@@ -57,7 +58,7 @@ h1 {
 
 h2 {
     @include adjust-font-size-to(24px,1.4);
-    color: $secondaryTextColor;
+    color: $subheading-color--on-light-bg;
     font-weight: 700;
     margin: 0 0 rhythm(.5);
     @include respond-to(30) {
@@ -79,7 +80,7 @@ p {
     }
 
     code {
-        background: #eee;
+        background: $codesnippet-bg;
         padding: 0 5px;
         font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     }
@@ -100,20 +101,15 @@ pre {
 a,
 a:active,
 a:visited {
-    color: $primaryColor;
-    text-decoration: underline;
-}
-
-a:hover {
-    color: $darkPrimaryColor;
+    color: $link-text-color--on-light-bg;
     text-decoration: underline;
 }
 
 blockquote {
-    background: $pageBackground;
+    background: $quote-bg;
     margin: 0;
     padding: rhythm(.5) rhythm(1);
-    border-left: 5px solid darken($pageBackground,20%);
+    border-left: 5px solid darken($quote-bg,20%);
     @include adjust-font-size-to(16px,1.2);
     font-style: italic;
 }
@@ -121,7 +117,7 @@ blockquote {
 @import "partials/_sidebar.scss";
 
 .profile-pic {
-    max-width: 160px;
+    width: 160px;
     float: left;
     display: inline-block;
     border: 0;
@@ -185,7 +181,7 @@ blockquote {
     // width instead of flex-basis for ie10-11
     //https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
     width: 48%;
-    background: $TextOnDarkBgColor;
+    background: $light-bg;
     padding: rhythm(1);
     box-shadow: 0 0 5px rgba(0,0,0,.155);
     margin-bottom: rhythm(1);
@@ -208,7 +204,7 @@ blockquote {
 
     .work-item-footer {
         margin-top: auto;
-        border-top:1px solid whitesmoke;
+        border-top:1px solid $divider-color;
     }
 
     .work-item-footer p:last-child {
@@ -220,8 +216,8 @@ blockquote {
     }
 
     p span {
-        background: #eee;
-        color: $primaryTextColor;
+        background: $codesnippet-bg;
+        color: $text-color--on-light-bg;
         font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     }
     @include respond-to(90) {
@@ -310,7 +306,7 @@ blockquote {
     a:visited,
     a:hover {
         text-decoration: none;
-        color: $secondaryTextColor !important;
+        color: $light-text-color--on-light-bg !important;
         display: block;
         margin-bottom: rhythm(1);
     }
@@ -345,7 +341,7 @@ img {
 }
 
 .now-playing span {
-    color: $secondaryTextColor;
+    color: $light-text-color--on-light-bg;
     @include adjust-font-size-to(12px,1.5);
     display: block;
 }
@@ -357,7 +353,7 @@ img {
 $eq-w: 15px;
 $eq-h: 15px;
 $bar-w: $eq-w/5;
-$bar-bg: lighten($secondaryTextColor,25%);
+$bar-bg: lighten($light-text-color--on-light-bg,25%);
 @keyframes equalizer {
     0% {
         height: $eq-h;
@@ -417,7 +413,7 @@ $bar-bg: lighten($secondaryTextColor,25%);
             transform: translateY(-50%);
             height: calc(100%);
             width: 20px;
-            background: linear-gradient(to right, $pageBackground 50%, transparent);
+            background: linear-gradient(to right, $page-bg 50%, transparent);
             content:"";
             z-index:100;
             @include respond-to(37.5) {
@@ -431,7 +427,7 @@ $bar-bg: lighten($secondaryTextColor,25%);
                 transform: translateY(-50%);
                 height: calc(100%);
                 width: 20px;
-                background: linear-gradient(to left, $pageBackground 50%, transparent);
+                background: linear-gradient(to left, $page-bg 50%, transparent);
                 content:"";
                 z-index:100;
                 @include respond-to(37.5) {
@@ -441,7 +437,7 @@ $bar-bg: lighten($secondaryTextColor,25%);
     .slick-slider__item {
         height: 120px;
         padding:0 20px;
-        background: #fff;
+        background: $light-bg;
         margin: 10px;
         outline:0!important;
         cursor:move;

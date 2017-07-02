@@ -1,21 +1,27 @@
 //colors
 
 //side bar color
-$darkPrimaryColor: #D32F2F;
-$lightPrimaryColor: lighten($darkPrimaryColor,28%);
-//text color on dark bg
-$TextOnDarkBgColor: #FFFFFF;
+$dark-bg: #D32F2F;
+//text on dark bg
+$light-text--on-dark-bg: lighten($dark-bg,28%);
+$regular-text--on-dark-bg: #FFFFFF;
 
-//light background
-$pageBackground: #f9f9f9;
-//text accent color on light background
-$primaryColor: lighten($darkPrimaryColor,1%);
+//light backgrounds
+$page-bg: #f9f9f9;
+$light-bg: #fff;
+
 //text on light background
-$primaryTextColor: #212121;
-$secondaryTextColor: #727272;
+$link-text-color--on-light-bg: $dark-bg;
+$text-color--on-light-bg: #212121;
+$light-text-color--on-light-bg: #727272;
+$lighter-text-color--on-light-bg: #b6b6b6;
+$heading-color--on-light-bg: $dark-bg;
+$subheading-color--on-light-bg: #727272;
 
 //extra colors
-$dividerColor: #B6B6B6;
+$divider-color: #B6B6B6;
+$codesnippet-bg:#eee;
+$quote-bg:#f9f9f9;
 
 
 // typography base for vertical rhythm
@@ -26,6 +32,6 @@ $base-line-height: 24px;
 $round-to-nearest-half-line: true;
 
 // other
-
 $sidebarW: 400px;
 $sidebarW2:300px;
+$box-shadow:0 0 5px rgba(0,0,0,.155);

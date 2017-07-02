@@ -1,6 +1,6 @@
 .blog {
     img {
-        border:1px solid lightgrey;
+        border:1px solid $divider-color;
         padding:rhythm(.5);
 
         &.cover {
@@ -9,9 +9,9 @@
         }
     }
   .entry {
-    background: $TextOnDarkBgColor;
+    background: $light-bg;
     padding: rhythm(1) rhythm(2);
-    box-shadow: 0 0 5px rgba(0,0,0,.155);
+    box-shadow: $box-shadow;
     margin: 0 0 span(.5);
     @include respond-to(64) {
       padding: rhythm(1);
@@ -24,14 +24,14 @@
   a,
   a:visited {
     &.more-link {
-      background: $primaryColor;
-      color: $TextOnDarkBgColor;
+      background: $dark-bg;
+      color: $regular-text--on-dark-bg;
       border-radius: 2px;
       text-transform: uppercase;
       padding: rhythm(.5);
       margin: rhythm(1) 0 rhythm(.5);
       display: inline-block;
-      border-bottom: 5px solid rgba(0,0,0,.2);
+      border-bottom: 5px solid darken($dark-bg,10%);
       text-decoration: none;
     }
   }
@@ -45,7 +45,7 @@
   }
   .date,
   .sharethis {
-    color: $dividerColor;
+    color: $lighter-text-color--on-light-bg;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   }
   $color-set: ( facebook:#3B5998, twitter: #56A3D9, linkedin: #007BB6, gplus:#D14836 );
@@ -101,7 +101,7 @@
       }
     }
     i.social-ico {
-      color: $TextOnDarkBgColor;
+      color: $regular-text--on-dark-bg;
     }
   }
   .pagination {
@@ -129,11 +129,11 @@
         margin-left: 0;
       }
       .disabled {
-        color: $secondaryTextColor;
+        color: $lighter-text-color--on-light-bg;
       }
       .active {
-        background: $darkPrimaryColor;
-        color: $TextOnDarkBgColor;
+        background: $dark-bg;
+        color: $regular-text--on-dark-bg;
         padding: 5px 10px;
         border-radius: 5px;
       }

@@ -671,7 +671,7 @@ userFeed.run();
 function checklocation(){
     var emptyLocation = $('.insta-geolocation:empty');
     var presentLocation = $(".insta-geolocation:not(:empty)");
-    $(emptyLocation).parent().remove();
+    $(emptyLocation).remove();
     $(presentLocation).prepend("<i class='fa fa-map-marker'></i> ")
 }
 $(document).ready(function(){

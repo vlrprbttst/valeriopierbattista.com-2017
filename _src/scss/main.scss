@@ -414,11 +414,11 @@ $bar-bg: lighten($light-text-color--on-light-bg,25%);
             transform: translateY(-50%);
             height: calc(100%);
             width: 20px;
-            background: linear-gradient(to right, $page-bg 50%, transparent);
+            background: linear-gradient(to right, $page-bg 50%, rgba($page-bg,0));
             content:"";
             z-index:100;
             @include respond-to(37.5) {
-                left: 0;
+                left: -1px;
             }
         }
         &:after {
@@ -428,7 +428,7 @@ $bar-bg: lighten($light-text-color--on-light-bg,25%);
                 transform: translateY(-50%);
                 height: calc(100%);
                 width: 20px;
-                background: linear-gradient(to left, $page-bg 50%, transparent);
+                background: linear-gradient(to left, $page-bg 50%, rgba($page-bg,0));
                 content:"";
                 z-index:100;
                 @include respond-to(37.5) {

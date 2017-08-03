@@ -992,7 +992,8 @@ nav ul {
 
 .insta-caption {
   font-size: 1em;
-  line-height: 1.8em;
+  line-height: 1.5em;
+  margin-bottom: 0.75em;
   font-weight: bold; }
 
 .insta-geolocation {
@@ -1388,4 +1389,5 @@ pre[class*="language-"] {
 
 .cookie-visible {
   display: block !important; }
+
 /*# sourceMappingURL=main.css.map */

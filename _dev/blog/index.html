@@ -1,59 +1,332 @@
----
-layout: default
----
-<div class="page-container">
+<!doctype html>
+<!--[if IE 9]>
+<html lang="en" class="ie ie9">
+<![endif]-->
+<!--[if lt IE 9]>
+<html lang="en" class="ie ie-legacy">
+<![endif]-->
+<html lang="en">
+
+<head>
+    <title>Blog | Valerio Pierbattista - Front end developer</title>
+    <meta name="description" content="I am a creative Front End Developer and Web Designer living in Rome, Italy. I love simple and functional interfaces optimized for anything that can access the web.">
+
+    <meta charset="utf-8">
+<script src="https://use.fontawesome.com/99fde4e73f.js"></script>
+<link href="/css/main.css" rel="stylesheet" type="text/css">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Use latest IE randering engine and switch on chrome Frame if available -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="content-language" content="EN">
+<!-- favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#d32f2f">
+<meta name="theme-color" content="#ffffff">
+
+
+    <meta property="og:title" content="Valerio Pierbattista - Front end developer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.valeriopierbattista.com/blog/">
+    <meta property="og:image" content="http://www.valeriopierbattista.com/images/facebook-image.png">
+    <meta property="og:description" content="I am a creative Front End Developer and Web Designer living in Rome, Italy. I love simple and functional interfaces optimized for anything that can access the web.">
+    <meta property="og:site_name" content="http://valeriopierbattista.com">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="http://www.valeriopierbattista.com/blog/">
+    <meta name="twitter:creator" content="@vlrprbttst">
+    <meta name="twitter:title" content="Valerio Pierbattista - Front end developer">
+    <meta name="twitter:description" content="I am a creative Front End Developer and Web Designer living in Rome, Italy. I love simple and functional interfaces optimized for anything that can access the web.">
+    <meta name="twitter:image" content="http://www.valeriopierbattista.com/images/facebook-image.png">
+</head>
+
+<body class="container">
+     <div id="info_cookie" style="display:none" class="cookie-hidden">
+    Questo sito raccoglie dati statistici anonimi sulla navigazione, mediante cookie installati da terze parti autorizzate, rispettando la privacy dei tuoi dati personali e secondo le norme previste dalla legge. Continuando a navigare su questo sito accetti
+    il servizio e gli stessi cookie.
+    <br>
+    <div class="ok-cookie cookie-btn">
+        <i class="fa fa-thumbs-up"></i> ok
+    </div>
+    <div class="cookie-policy cookie-btn">
+        <a href="cookies.php">cookie policy</a>
+    </div>
+</div>
+
+     <div class="sidebar">
+    <i id="bars" class="fa fa-bars"></i>
+    <div class="sub-container-sidebar">
+        <section itemscope itemtype="http://data-vocabulary.org/Person">
+            <span itemprop="name" class="name">Valerio Pierbattista</span>
+            <br>
+            <span itemprop="title" class="job">
+                <code>
+                    Front end web developer
+                </code>
+            </span>
+        </section>
+    </div>
+
+    <nav class="nav">
+        <ul>
+            <li>
+                <a href="/index.html"><i class="fa fa-user"></i> About</a>
+            </li>
+            <li>
+                <a href="/work.html"><i class="fa fa-code"></i> Work</a>
+            </li>
+            <li>
+                <a href="/blog"><i class="fa fa-pencil"></i> Blog</a>
+            </li>
+            <li>
+                <a href="mailto:omegaiori@gmail.com"><i class="fa fa-send-o"></i> Contact</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+        <div class="page-container">
 	<div class="sub-container blog">
-		{% for post in paginator.posts %}
+		
 		<div class="entry">
-			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+			<h1><a href="/blog/a-frontend-workflow-for-static-websites/">A Frontend Workflow For Static Websites</a></h1>
 
-				<span class="date"><i class="fa fa-clock-o"></i> {{ post.date | date: '%B %d, %Y'}}</span>
+				<span class="date"><i class="fa fa-clock-o"></i> June 24, 2017</span>
 
-			{{ post.excerpt }}
-			<a class="more-link" href="{{ post.url }}">continue reading <i class="fa fa-chevron-right"></i></a>
+			<p><img src="/images/blog/boxtent.jpg" class="cover" /></p>
+
+<p>I’ve created and launched <strong>BoxTent</strong> around a year ago and after using it on many projects I now have a solid understanding of its potential, that’s why I’ve decided to write a blog post about it only at present time.</p>
+
+<p><a href="http://boxtent.top">BoxTent</a> could be described as a <strong>highly automated workflow</strong>, designed to build simple static websites with performance in mind. Every time I started a new project I would always end up setting a similar work flow and environment, one that took care of the <strong>SAMO©</strong> stuff like sass support, javascript concatenation, assets optimization and so on. I’ve decided to optimize the time involved in setting up the work environment and the task management, <strong>that’s how <a href="http://boxtent.top">BoxTent</a> was born</strong>.</p>
+
+
+			<a class="more-link" href="/blog/a-frontend-workflow-for-static-websites/">continue reading <i class="fa fa-chevron-right"></i></a>
 		</div>
-		{% endfor %}
+		
+		<div class="entry">
+			<h1><a href="/blog/understanding-git-and-github/">Understanding Git And Github</a></h1>
+
+				<span class="date"><i class="fa fa-clock-o"></i> December 31, 2015</span>
+
+			<p><img src="/images/blog/github.jpg" class="cover" /></p>
+
+<p>Understanding what Git and Github are is one important step in the life of a developer. I used to keep my projects and files on my computer hard drive and <strong>I had no way
+of accessing them from any other location different from home</strong>. Github let’s you <em>push</em> your codebase online and makes it accessible from any remote location, which can be anything: from your work’s computer to your friend’s for example.</p>
+
+<p>Github is a <em>social</em> platform for code repositories, and it’s free as long as you <strong>keep your repos openly accessible and public</strong>. You might turn up your nose at keeping all your work online and clearly visible to anyone, but that’s one cornerstone of this community: open sourcing is the best way to let anyone reuse, learn and get inspired by your code. Using others work and knowledge is how we all started, isn’t it? So let’s start open sourcing!</p>
+
+
+			<a class="more-link" href="/blog/understanding-git-and-github/">continue reading <i class="fa fa-chevron-right"></i></a>
+		</div>
+		
+		<div class="entry">
+			<h1><a href="/blog/lessons-learned-from-my-first-stupid-open-source-side-project/">Lessons Learned From My First Stupid Open Source Side Project</a></h1>
+
+				<span class="date"><i class="fa fa-clock-o"></i> April 11, 2015</span>
+
+			<p><img src="/images/blog/dux.png" alt="dux" class="cover" /></p>
+
+<p>It has been a while since I wanted to create an open source project, something just for fun and not necessarily <strong>useful</strong>.</p>
+
+<p>The idea for <a title="drunkuserexperience.com" href="http://www.drunkuserexperience.com" target="_blank">www.drunkuserexperience.com</a> came after
+<a href="http://tech.co/the-user-is-drunk-pay-this-ux-designer-to-get-drunk-and-evaluate-your-sites-ux-2015-03" target="_blank">reading about this guy </a> getting paid to get drunk and evaluate the client’s website’s UX is an altered state.
+The idea was pretty funny and I thought I could do better offering a similar “service” for free.
+I imagined a webpage where you could insert the URL of your website that would then be rendered in an <code class="language-html">iframe</code> all moving and blurry using css <code class="language-css">filter</code> and
+<code class="language-css">transform</code> properties. Without thinking too much, I started working on it.</p>
+
+
+			<a class="more-link" href="/blog/lessons-learned-from-my-first-stupid-open-source-side-project/">continue reading <i class="fa fa-chevron-right"></i></a>
+		</div>
+		
+		<div class="entry">
+			<h1><a href="/blog/automate-critical-above-the-fold-css-authoring-and-embedding/">Automate Critical Above The Fold Css Authoring And Embedding</a></h1>
+
+				<span class="date"><i class="fa fa-clock-o"></i> March 19, 2015</span>
+
+			<p><img src="/images/blog/penthouse.jpg" alt="penthouse" class="cover" /></p>
+
+<p>We all know the best way to serve our website to our audience is to serve it <strong>fast</strong>, as fast as humanly possible. A couple of key factors for speed are how you serve css and javascript in your page. One thing Google suggests to do
+ is to inline in the <code class="language-markup">head</code> of your document the “<strong>above the fold</strong>” css, which translates to all the css that paint what users see first when accessing your website:
+  the header, the menu, the main content… The footer is clearly <strong>not </strong>above-the-fold material for example.</p>
+
+
+			<a class="more-link" href="/blog/automate-critical-above-the-fold-css-authoring-and-embedding/">continue reading <i class="fa fa-chevron-right"></i></a>
+		</div>
+		
+		<div class="entry">
+			<h1><a href="/blog/jekyll-and-grunt-boilerplate/">Jekyll And Grunt Boilerplate</a></h1>
+
+				<span class="date"><i class="fa fa-clock-o"></i> March 10, 2015</span>
+
+			<p><img title="jekyll and grunt boilerplate" src="/images/blog/gruntjekyll.png" alt="jekyll and grunt boilerplate" class="cover" /></p>
+
+<p><strong>Jekyll</strong> is great, and it gets even better with <strong>Grunt </strong> automating repetitive tasks. I’m assuming you already know what <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>
+and <a href="http://gruntjs.com/" target="_blank">Grunt</a> are. I’ve covered Grunt in a
+<a title="Grunt Boilerplate for Front End Developers and Webdesigners" href="http://valeriopierbattista.com/blog/grunt-boilerplate-for-front-end-developers-and-webdesigners/">previous blog post</a>
+so you may want to check that out before continuing, as we will use a very similar <em>gruntfile</em>. If you never used <strong>Jekyll</strong> before,
+I suggest you to read <a href="https://www.andrewmunsell.com/tutorials/jekyll-by-example" target="_blank">this great tutorial</a> before starting. Jekyll is a static site generator,
+ and it’s <em>“blog aware”</em>, this means it’s ready to manage posts, categories, excerpts and all you need to create and maintain a modern blog without having to deal with CMS installations, theme hacking and databases.
+ You are in complete control here and you will have more time to focus on what really matters: <strong>your content</strong>.</p>
+
+
+			<a class="more-link" href="/blog/jekyll-and-grunt-boilerplate/">continue reading <i class="fa fa-chevron-right"></i></a>
+		</div>
+		
+		<div class="entry">
+			<h1><a href="/blog/a-small-collection-of-useful-sass-mixins/">A Small Collection Of Useful Sass Mixins</a></h1>
+
+				<span class="date"><i class="fa fa-clock-o"></i> February 25, 2015</span>
+
+			<p><img src="/images/blog/seal-color-aef0354c-150x150.png" style="width:120px;height:auto;float:left; margin-right:20px" alt="sass mixin" class="cover" /></p>
+
+<p>Everytime I create a new project, I always begin with some kind of starter-kit that includes the basics every
+project should have. I’m talking about an html5 index file for example, a folder structure I usually tend to use,
+my <a title="Grunt Boilerplate for Front End Developers and Webdesigners" href="http://valeriopierbattista.com/blog/grunt-boilerplate-for-front-end-developers-and-webdesigners/">grunt boilerplate</a> files etc.
+Today I want to share what’s in my <code class="markup">_mixin.scss</code> file: a selection of just <strong>four useful mixins</strong> I think every front-end developer should consider using.</p>
+
+
+			<a class="more-link" href="/blog/a-small-collection-of-useful-sass-mixins/">continue reading <i class="fa fa-chevron-right"></i></a>
+		</div>
+		
+		<div class="entry">
+			<h1><a href="/blog/responsive-heights/">Responsive Heights</a></h1>
+
+				<span class="date"><i class="fa fa-clock-o"></i> February 17, 2015</span>
+
+			<p>Responsive webdesign is very much centered on how to manage the widths of our elements, but what about the heights?
+Heights are usually tied to the lenght of the content, and are rarely a problem to address, but in some cases (<strong>especially on mobile</strong>) sometimes you need some elements to always be visibile on the screen,
+ and some others (usually content boxes) to scroll, as you want all the content to appear on the window without having to scroll down the whole page to reveal more.</p>
+
+
+			<a class="more-link" href="/blog/responsive-heights/">continue reading <i class="fa fa-chevron-right"></i></a>
+		</div>
+		
+		<div class="entry">
+			<h1><a href="/blog/sass-maps-a-simple-use-case/">Sass Maps A Simple Use Case</a></h1>
+
+				<span class="date"><i class="fa fa-clock-o"></i> September 08, 2014</span>
+
+			<p>I just recently discovered and used Sass Maps, which are basically arrays of values which can be intelligently used to write less code in particular situations. This is just one use case that was useful for me and may be
+ useful for you to understand the power of <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps">Sass Maps</a>.</p>
+
+
+			<a class="more-link" href="/blog/sass-maps-a-simple-use-case/">continue reading <i class="fa fa-chevron-right"></i></a>
+		</div>
+		
+		<div class="entry">
+			<h1><a href="/blog/grunt-boilerplate-for-front-end-developers-and-webdesigners/">Grunt Boilerplate For Front End Developers And Webdesigners</a></h1>
+
+				<span class="date"><i class="fa fa-clock-o"></i> September 06, 2014</span>
+
+			<p><img src="/images/blog/grunt-logo.svg" alt="grunt-logo" style="float:left;width:200px;margin:0 20px 0 0" class="cover" />
+This is a grunt boilerplate I developed and assembled for my needs. I’ve been looking around for something like this but couldn’t find it, that’s why I decided to share my achievement on my blog.
+ If it’s your first read about grunt, please read this first instead: <a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">http://24ways.org/2013/grunt-is-not-weird-and-hard/</a> - this is a quite comprehensive guide on
+ how to get started, what to install before using grunt on your machine, and it’s useful for the overall understanding of the basic concepts. I strongly recommend to start with that article before further reading.
+ Once you’ve read and understood the basics, I’m supposing you have a general idea of what grunt does and how you feel like that article doesn’t cover everything you need. you clearly want more.</p>
+
+
+			<a class="more-link" href="/blog/grunt-boilerplate-for-front-end-developers-and-webdesigners/">continue reading <i class="fa fa-chevron-right"></i></a>
+		</div>
+		
+		<div class="entry">
+			<h1><a href="/blog/programmare-fa-schifo/">Programmare Fa Schifo</a></h1>
+
+				<span class="date"><i class="fa fa-clock-o"></i> September 04, 2014</span>
+
+			<p id="docs-internal-guid-36aee34b-4210-05e6-3454-b007f49dc340" dir="ltr"><strong>Nota:</strong> Questa è la traduzione italiana dell'articolo “<a href="http://stilldrinking.org/programming-sucks" target="_blank">Programming Sucks</a>” di <a href="http://stilldrinking.org/" target="_blank">Peter Welsh</a>. Ho letto per la prima volta questo articolo qualche mese fa, e mi ha talmente divertito e fatto sentire meno solo, che lo considero un must-read per chiunque lavori nel mondo della programmazione. Ho deciso di tradurlo e dedicargli un post sul mio blog per poterlo condividere, non mi cimento di solito in opere di traduzione, scuserete quindi eventuali imprecisioni grammaticali e/o strafalcioni.</p>
+<p dir="ltr"><strong>Note:</strong> This is the italian translation of the brilliant article “<a href="http://stilldrinking.org/programming-sucks" target="_blank">Programming Sucks</a>” by <a href="http://stilldrinking.org/" target="_blank">Peter Welsh</a>. This article was so funny to read that i decided to translate it in my native language and share it on my blog.</p>
+
+<h2>Programmare fa schifo</h2>
+<p><img class="cover" src="/images/blog/code-horror.gif" alt="programmare fa schifo" /></p>
+<p dir="ltr">Ogni amico che ho che abbia un lavoro che implichi uno sforzo maggiore di sollevare un laptop un paio di volte a settimana trova sempre il modo di infilare in una qualsiasi conversazione frasi tipo: "amico mio, tu non lavori sodo. Ho appena finito una settimana di 4700 ore di lavoro a scavare un tunnel sotto Mordor con un cacciavite"</p>
+<p dir="ltr">
+
+</p>
+
+			<a class="more-link" href="/blog/programmare-fa-schifo/">continue reading <i class="fa fa-chevron-right"></i></a>
+		</div>
+		
 
 		<div class="pagination">
 			<ul>
-				{% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
-				<li>
-					<a href="/blog/">Prev</a>
-				</li>
-				{% else %}
-				<li>
-					<a href="/blog/{{ paginator.previous_page }}">Prev</a>
-				</li>
-				{% endif %} {% else %}
+				
 				<li>
 					<span class="disabled">Prev</span>
 				</li>
-				{% endif %} {% if paginator.page == 1 %}
+				 
 				<li>
 					<span class="active">1</span>
 				</li>
-				{% else %}
+				  
 				<li>
-					<a href="/blog/">1</a>
+					<a href="/blog/2">2</a>
 				</li>
-				{% endif %} {% for count in (2..paginator.total_pages) %} {% if count == paginator.page %}
+				  
 				<li>
-					<span class="active">{{ count }}</span>
+					<a href="/blog/2">Next</a>
 				</li>
-				{% else %}
-				<li>
-					<a href="/blog/{{ count }}">{{ count }}</a>
-				</li>
-				{% endif %} {% endfor %} {% if paginator.next_page %}
-				<li>
-					<a href="/blog/{{ paginator.next_page }}">Next</a>
-				</li>
-				{% else %}
-				<li>
-					<span class="disabled">Next</span>
-				</li>
-				{% endif %}
+				
 			</ul>
 		</div>
 	</div>
 </div>
+
+
+     <footer class="footer">
+	<div class="sub-container-sidebar">
+		<div class="site-info">
+			Hand-Coded with 💦&nbsp;&nbsp;in Rome (Italy) using <a href="http://boxtent.top/" target="_blank">Boxtent</a> and <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. <a href="/cookies.html">Privacy and Cookie Policy </a>
+		</div>
+		<div class="footer-sep"></div>
+		<div class="social-cont">
+			<div class="social-box email">
+				<a href="mailto:omegaiori@gmail.com" target="_blank"> <i class="fa social-ico fa-envelope"> </i> </a>
+			</div>
+
+			<div class="social-box twitter">
+				<a href="https://twitter.com/vlrprbttst" target="_blank"> <i class="fa social-ico fa-twitter"> </i> </a>
+			</div>
+
+			<div class="social-box youtube">
+				<a href="https://www.youtube.com/user/valeriopierbattista" target="_blank"> <i class="fa social-ico fa-youtube"> </i> </a>
+			</div>
+
+			<div class="social-box instagram">
+				<a href="http://instagram.com/vlrprbttst" target="_blank"> <i class="fa social-ico fa-instagram"> </i> </a>
+			</div>
+
+			<div class="social-box linkedin">
+				<a href="https://it.linkedin.com/in/valeriopierbattista" target="_blank"> <i class="fa social-ico fa-linkedin"> </i> </a>
+			</div>
+
+			<div class="social-box github">
+				<a href="http://github.com/vlrprbttst" target="_blank"> <i class="fa social-ico fa-github"> </i> </a>
+			</div>
+
+			<div class="social-box codepen">
+				<a href="http://codepen.io/vlrprbttst" target="_blank"> <i class="fa social-ico fa-codepen"> </i> </a>
+			</div>
+
+			<div class="social-box cv">
+				<a href="http://valeriopierbattista.com/cv" target="_blank"> <i class="fa social-ico fa-file-text-o"> </i> </a>
+			</div>
+
+		</div>
+		<!-- /social-cont -->
+	</div>
+</footer>
+
+     
+        <!-- build:js /js/production.min.js -->
+        <script src="/js/libs/jquery/dist/jquery.js"></script>
+        <script src="/js/custom/headroom.js"></script>
+        <script src="/js/custom/main.js"></script>
+        <!-- /build -->
+
+     <script src="/js/custom/prism.js"></script>
+</body>
+</html>

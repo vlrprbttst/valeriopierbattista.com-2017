@@ -662,7 +662,7 @@ jQuery(function($){
 var userFeed = new Instafeed({
 	get : 'user',
 	userId : 33551734,
-	accessToken : '33551734.1677ed0.55edac8ccae947ce9b98824757fef93c',
+	accessToken : '33551734.1677ed0.8264e137bd70422ba8875d38732fe946',
 	limit : 3,
 	resolution : 'standard_resolution',
 	template : '<div class="insta-wrapper"><a href="{{link}}" target="_blank"><img src="{{image}}"><div class="insta-text-wrapper"><div class="insta-caption">{{caption}}</div><div class="insta-geolocation">{{location}}</div></div></a></div>'

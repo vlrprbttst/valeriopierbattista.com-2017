@@ -10,6 +10,8 @@
 @import "partials/_slick.scss";
 @import "partials/_slick-theme.scss";
 
+@import "partials/_anim.scss";
+
 html {
     box-sizing: border-box;
     height: 100%;
@@ -471,6 +473,8 @@ $bar-bg: lighten($light-text-color--on-light-bg,25%);
         }
     }
 }
+
+
 @import "partials/_blog.scss";
 @import "partials/_prism.scss";
 @import "partials/_cookie.scss";

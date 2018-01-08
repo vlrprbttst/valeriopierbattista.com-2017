@@ -113,7 +113,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
-                    '<%= dev %>/<%= js %>/libs/jquery/dist/jquery.js','<%= dev %>/<%= js %>/custom/headroom.js','<%= dev %>/<%= js %>/custom/main.js'
+                    '<%= dev %>/<%= js %>/libs/jquery/dist/jquery.js','<%= dev %>/<%= js %>/custom/headroom.js','<%= dev %>/<%= js %>/custom/anim.js','<%= dev %>/<%= js %>/custom/main.js'
                 ],
                 dest: '<%= site %>/<%= js %>/production.js'
             }

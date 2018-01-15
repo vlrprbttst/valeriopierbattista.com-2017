@@ -172,15 +172,17 @@ sass : {
 </code></pre>
 
 <p><span style="text-decoration: underline;">Image compression</span> <br /><br />
- I’ve created two separate folders for this task:
- - <strong>src</strong>: contains the uncompressed images you save from photoshop
-- <strong>dist</strong>: contains the compressed images (the ones you will link to in your project)
+ I’ve created two separate folders for this task:</p>
+<ul>
+  <li><strong>src</strong>: contains the uncompressed images you save from photoshop</li>
+  <li><strong>dist</strong>: contains the compressed images (the ones you will link to in your project)
  Every time you save an image in the <strong>src</strong> folder (or in its subfolders), it will be compressed and saved in the <strong>dist</strong> folder. This will occur only when you add a new image to the <strong>src</strong>
-  folder and only the <a href="https://github.com/tschaub/grunt-newer">newer</a> image will be compressed. What if you don’t need an image anymore? Just <a href="https://github.com/taylorcode/grunt-delete-sync">delete it</a>
-  from the src folder and the dist folder will be updated accordingly.
+folder and only the <a href="https://github.com/tschaub/grunt-newer">newer</a> image will be compressed. What if you don’t need an image anymore? Just <a href="https://github.com/taylorcode/grunt-delete-sync">delete it</a>
+from the src folder and the dist folder will be updated accordingly.
  <strong>WARNING</strong>: if you start your project with an empty src folder, imagemin may not trigger.
  Hit  <code class="language-markup">ctrl+c</code>  then type  <code class="language-markup">Y</code> to exit grunt. Type  <code class="language-markup">grunt imagemin</code> .
-  This will trigger imagemin which will compress the first image you created. Now type  <code class="language-markup">grunt</code> again and go back to your normal workflow, imagemin should trigger as expected from now on.</p>
+This will trigger imagemin which will compress the first image you created. Now type  <code class="language-markup">grunt</code> again and go back to your normal workflow, imagemin should trigger as expected from now on.</li>
+</ul>
 
 <p>You can now either build the boilerplate from scratch or you can simply
 <a href="https://github.com/vlrprbttst/grunt-boilerplate" target="_blank"> clone it from <i class="fa fa-github"></i> github!</a>.</p>

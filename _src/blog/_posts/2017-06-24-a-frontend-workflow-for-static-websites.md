@@ -7,7 +7,7 @@ post-image: boxtent.jpg
 
 I've created and launched **BoxTent** around a year ago and after using it on many projects I now have a solid understanding of its potential, that's why I've decided to write a blog post about it only at present time.
 
-[BoxTent](http://boxtent.top) could be described as a **highly automated workflow**, designed to build simple static websites with performance in mind. Every time I started a new project I would always end up setting a similar work flow and environment, one that took care of the **SAMO&copy;** stuff like sass support, javascript concatenation, assets optimization and so on. I've decided to optimize the time involved in setting up the work environment and the task management, **that's how [BoxTent](http://boxtent.top) was born**.
+[BoxTent](http://valeriopierbattista.com/projects/boxtent/) could be described as a **highly automated workflow**, designed to build simple static websites with performance in mind. Every time I started a new project I would always end up setting a similar work flow and environment, one that took care of the **SAMO&copy;** stuff like sass support, javascript concatenation, assets optimization and so on. I've decided to optimize the time involved in setting up the work environment and the task management, **that's how [BoxTent](http://valeriopierbattista.com/projects/boxtent/) was born**.
 
 <!--more-->
 
@@ -44,7 +44,7 @@ These things I didn't like about Jekyll are now solved by BoxTent. **The integra
 
 ## Is it hackable?
 
-BoxTent is **easily hackable and extensible** to suit your needs if you know your way in a `gruntfile.js`. You can check out [the repository of my website](https://github.com/vlrprbttst/valeriopierbattista.com-2017) to see how I integrated the susy grid, compass, some php to grab my tweets, jekyll and a bunch of jquery plugins. Don't forget **BoxTent also has a extensive user guide** at [www.boxtent.top](www.boxtent.top) where every aspect of BoxTent is explained.
+BoxTent is **easily hackable and extensible** to suit your needs if you know your way in a `gruntfile.js`. You can check out [the repository of my website](https://github.com/vlrprbttst/valeriopierbattista.com-2017) to see how I integrated the susy grid, compass, some php to grab my tweets, jekyll and a bunch of jquery plugins. Don't forget **BoxTent also has a extensive user guide** at [http://valeriopierbattista.com/projects/boxtent/](http://valeriopierbattista.com/projects/boxtent/) where every aspect of BoxTent is explained.
 
 ## Isn't BoxTent born obsolete?
 
